@@ -528,16 +528,6 @@ public class Gui extends javax.swing.JFrame {
     }//GEN-LAST:event_BackToMenuFromShowMouseClicked
 
     private void NShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NShowActionPerformed
-        int n = Integer.parseInt(((String) Objects.requireNonNull(NShow.getSelectedItem())).trim());
-        BufferedImage myPicture = null;
-        try {
-            myPicture = ImageIO.read(new File(getClass().getResource("/networks/"+n+".jpg").toURI()));
-        } catch (IOException | URISyntaxException e) {
-            e.printStackTrace();
-        }
-        assert myPicture != null;
-        myPicture = resize(myPicture,ShowPanel.getWidth(),ShowPanel.getHeight());
-        ShowPanel.getGraphics().drawImage(myPicture,0,0,ShowPanel);
     }//GEN-LAST:event_NShowActionPerformed
 
     private void DAlgorithmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DAlgorithmActionPerformed
