@@ -1,14 +1,17 @@
-package genetic_algorithm;
+package genetic_algorithm.crossover;
+
+import genetic_algorithm.hybrid.Chromosome;
+import genetic_algorithm.hybrid.Gene;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SinglePointCrossover implements Crossover{
+public class SinglePointCrossover implements ICrossover {
 
     @Override
     public Chromosome cross(Chromosome parent0, Chromosome parent1, boolean verbose) {
         if(verbose){System.out.print("Crossing parents...");}
-        Chromosome chromosome=new Chromosome(parent0.getWires());
+        Chromosome chromosome=new Chromosome(parent0.getWires(),parent0.getTargetDepth());
 
         if(parent0.getParallelLayers().size() < parent1.getParallelLayers().size()) {
             Chromosome aux = parent0;

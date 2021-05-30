@@ -1,6 +1,5 @@
 package genetic_algorithm.network;
 
-import genetic_algorithm.Chromosome;
 import javafx.util.Pair;
 
 import java.util.ArrayList;

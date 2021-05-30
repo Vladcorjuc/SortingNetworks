@@ -1,5 +1,7 @@
-package genetic_algorithm;
+package genetic_algorithm.hybrid;
 
+import genetic_algorithm.editor.IEditor;
+import genetic_algorithm.editor.RedundancyEditor;
 import genetic_algorithm.network.Network;
 import genetic_algorithm.network.Utils;
 import javafx.util.Pair;
@@ -13,23 +15,23 @@ public class Population {
     private List<Double>  fitnessValues;
     private double fitnessSum;
 
-    private Function<Pair<Chromosome,Population>,Double> fitness;
+    private Function<Chromosome,Double> fitness;
 
-    public Population(int n, Function<Pair<Chromosome,Population>, Double> fitness) {
+    public Population(int n, Function<Chromosome, Double> fitness) {
         this.fitness=fitness;
         this.population=new ArrayList<>();
         this.fitnessValues=new ArrayList<>();
         this.fitnessSum=0;
     }
-    public static Population initialize(int n, int parallelLayerSize ,int populationSize,
-                                        Function<Pair<Chromosome,Population>, Double> fitness, Editor editor,Fixer fixer,
+    public static Population initialize(int n, int parallelLayerSize,int d , int populationSize,
+                                        Function<Chromosome, Double> fitness, IEditor editor, Fixer fixer,
                                         boolean verbose) {
         if(verbose){System.out.print("Initializing population...");}
         Population population = new Population(n,fitness);
         Network filter = Network.createGreenFilter(n);
         for(int i=0;i<populationSize;i++){
             //Chromosome chromosome = new Chromosome(parallelLayerSize,n);
-           Chromosome chromosome = new Chromosome(parallelLayerSize,n,filter.getLayers());
+           Chromosome chromosome = new Chromosome(parallelLayerSize,n,d,filter.getLayers());
            editor.edit(chromosome,verbose);
            chromosome = fixer.repair(chromosome,verbose);
            population.addChromosome(chromosome);
@@ -40,7 +42,7 @@ public class Population {
 
     public void addChromosome(Chromosome chromosome){
         population.add(chromosome);
-        Double value= fitness.apply(new Pair<>(chromosome,this));
+        Double value= fitness.apply(chromosome);
         fitnessValues.add(value);
         fitnessSum += value;
     }
@@ -51,7 +53,18 @@ public class Population {
         return population.get(index);
     }
 
+    public int getBestPosition() {
+        Pair<Integer,Double> max= new Pair<>(-1, -1.0);
 
+        for (int i=0;i<population.size();i++) {
+            Chromosome chromosome = population.get(i);
+            Double value = fitnessValues.get(i);
+            if(value>max.getValue()){
+                max= new Pair<>(i,value);
+            }
+        }
+        return max.getKey();
+    }
     public Pair<Chromosome, Double> getBest() {
         Pair<Chromosome,Double> max= new Pair<>(null, -1.0);
 
@@ -88,7 +101,7 @@ public class Population {
 
     public void replace(Pair<Chromosome,Chromosome> parents, Chromosome offspring,boolean  verbose) {
         if(verbose){System.out.print("Replace population...");}
-        Double offSpringValue = fitness.apply(new Pair<>(offspring,this));
+        Double offSpringValue = fitness.apply(offspring);
         int parent0Index = population.indexOf(parents.getKey());
         int parent1Index = population.indexOf(parents.getValue());
         if(offSpringValue > fitnessValues.get(parent0Index)){
@@ -104,11 +117,11 @@ public class Population {
         if(verbose){System.out.println("Done");}
 
     }
-    private void replaceIndividual(int index,Chromosome offspring){
+    public void replaceIndividual(int index,Chromosome offspring){
         fitnessSum -= fitnessValues.get(index);
         population.set(index,offspring);
 
-        Double value= fitness.apply(new Pair<>(offspring,this));
+        Double value= fitness.apply(offspring);
         fitnessValues.set(index,value);
         fitnessSum += value;
     }
@@ -138,18 +151,18 @@ public class Population {
 
 
     public static void main(String[] args) {
-        Function<Pair<Chromosome,Population>,Double> fitness;
-        Editor editor;
+        Function<Chromosome,Double> fitness;
+        IEditor editor;
         Fixer fixer;
         fitness = GeneticAlgorithm::evaluate;
-        editor = new Editor();
+        editor = new RedundancyEditor();
         fixer = new Fixer(editor);
-        Population population = Population.initialize(5, 4,5,fitness,editor,fixer,false);
+        Population population = Population.initialize(5, 4,4,5,fitness,editor,fixer,false);
         for(Chromosome chromosome:population.getPopulation()){
             System.out.println(chromosome);
         }
 
-        Chromosome chromosome =new Chromosome(5);
+        Chromosome chromosome =new Chromosome(5,4);
         chromosome.addParallelLayer(new ArrayList<>());
         chromosome.addInParallelLayer(0, new Gene(0,0));
         population.replace(population.getParents(),chromosome,false);

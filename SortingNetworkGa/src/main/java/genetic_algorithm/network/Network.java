@@ -178,6 +178,15 @@ public class Network {
         input.swap(comparator.getStartingWire(), comparator.getEndingWire());
         return input;
     }
+    public double getOverDepth(int targetDepth) {
+        int number=0;
+        if(layers.size()>targetDepth){
+            for (int i=targetDepth;i<layers.size();i++){
+                number+=layers.get(i).getSize();
+            }
+        }
+        return number;
+    }
     //endregion
 
     public static Network createGreenFilter(int n){
@@ -308,4 +317,6 @@ public class Network {
         network.addComparator(new Comparator(1,4));
         System.out.println(network.visualize());
     }
+
+
 }

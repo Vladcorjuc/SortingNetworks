@@ -1,17 +1,15 @@
-package genetic_algorithm;
+package genetic_algorithm.hybrid;
 
-import genetic_algorithm.network.Layer;
-import javafx.util.Pair;
+import genetic_algorithm.editor.IEditor;
+import genetic_algorithm.editor.RedundancyEditor;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class Optimization {
-    private final Editor editor;
+    private final IEditor editor;
     private final Fixer fixer;
-    public Optimization(Editor editor, Fixer fixer){
+    public Optimization(IEditor editor, Fixer fixer){
         this.editor = editor;
         this.fixer = fixer;
     }
@@ -130,7 +128,7 @@ public class Optimization {
         genes.add(new Gene(1,2));
         genes.add(new Gene(3,4));
 
-        Optimization o = new Optimization(new Editor(),new Fixer(new Editor()));
+        Optimization o = new Optimization(new RedundancyEditor(),new Fixer(new RedundancyEditor()));
         System.out.println(o.exchange(genes,2,3));
         System.out.println(genes);
 

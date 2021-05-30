@@ -1,4 +1,4 @@
-package genetic_algorithm;
+package genetic_algorithm.hybrid;
 
 import genetic_algorithm.network.Layer;
 import genetic_algorithm.network.Network;
@@ -9,14 +9,14 @@ import java.util.*;
 public class Chromosome {
 
     private List<List<Gene>> parallelLayers;
-    private List<Gene> supplementalLayer;
+    private int targetDepth;
     private int wires;
 
     //region Constructors
-    public Chromosome(int n){
+    public Chromosome(int n,int targetDepth){
         this.wires=n;
+        this.targetDepth = targetDepth;
         parallelLayers=new ArrayList<>();
-        supplementalLayer=new ArrayList<>();
     }
     public Chromosome(Chromosome chromosome) {
         parallelLayers = new ArrayList<>();
@@ -27,13 +27,10 @@ public class Chromosome {
             }
             parallelLayers.add(layerList);
         }
-        supplementalLayer = new ArrayList<>();
-        for(Gene gene:chromosome.getSupplementalLayer()){
-            supplementalLayer.add(new Gene(gene));
-        }
         wires=chromosome.wires;
+        targetDepth = chromosome.targetDepth;
     }
-    public Chromosome(int k,int n){
+    public Chromosome(int k,int n,int d){
         this.wires=n;
         parallelLayers = new ArrayList<>(k);
         for(int i=0;i<k;i++){
@@ -45,11 +42,11 @@ public class Chromosome {
             }
             parallelLayers.add(geneList);
         }
-        supplementalLayer= new ArrayList<>();
+        targetDepth = d;
     }
-    public Chromosome(int k,int n, List<Layer> filter){
+    public Chromosome(int k,int n,int d, List<Layer> filter){
         this.wires=n;
-        parallelLayers = new ArrayList<>(k+filter.size());
+        parallelLayers = new ArrayList<>(k);
         for (Layer layer : filter) {
             List<Gene> geneList = new ArrayList<>();
             for (Comparator comparator : layer.getAll()) {
@@ -68,12 +65,11 @@ public class Chromosome {
             parallelLayers.add(geneList);
         }
 
-        supplementalLayer= new ArrayList<>();
+        targetDepth = d;
     }
 
     public Chromosome(Chromosome offspring, List<Gene> exchangedLayer, List<Gene> currentLayer) {
         this.parallelLayers=new ArrayList<>();
-        this.supplementalLayer=new ArrayList<>();
 
         for (List<Gene> layer:offspring.parallelLayers) {
 
@@ -92,15 +88,15 @@ public class Chromosome {
                 parallelLayers.add(layerList);
             }
         }
-
-        for(Gene gene:offspring.supplementalLayer){
-            this.supplementalLayer.add(new Gene(gene));
-        }
+        this.targetDepth = offspring.targetDepth;
         this.wires=offspring.wires;
     }
 
     //endregion
     //region Getters,Setters
+    public int getTargetDepth(){
+        return targetDepth;
+    }
     public int getWires() {
         return wires;
     }
@@ -109,7 +105,6 @@ public class Chromosome {
         for (List<Gene> layer:parallelLayers) {
             length+=layer.size();
         }
-        length+= supplementalLayer.size();
         return length;
     }
     public int depth(){
@@ -121,18 +116,18 @@ public class Chromosome {
        }
        return depth;
     }
-
+    public int getComparatorsOutOfDepth(){
+        int comparators=0;
+        for(int i = targetDepth;i<parallelLayers.size();i++){
+            comparators+= parallelLayers.get(i).size();
+        }
+        return comparators;
+    }
     public List<List<Gene>> getParallelLayers() {
         return parallelLayers;
     }
     public List<Gene> getParallelLayer(int index) {
         return parallelLayers.get(index);
-    }
-    public List<Gene> getSupplementalLayer() {
-        return supplementalLayer;
-    }
-    public Gene getSupplementalLayer(int index) {
-        return supplementalLayer.get(index);
     }
     public Network getNetwork() {
         Network net = new Network(this.wires);
@@ -140,10 +135,6 @@ public class Chromosome {
             for(Gene gene:parallelLayers.get(layer)){
                 net.addComparator(new Comparator(gene.getWire0(),gene.getWire1()),layer);
             }
-        }
-
-        for(Gene gene:supplementalLayer) {
-            net.addComparator(gene.getWire0(), gene.getWire1());
         }
         return net;
     }
@@ -166,12 +157,10 @@ public class Chromosome {
         }
         return true;
     }
-    public void addSupplementalLayer(Gene gene) {
-        supplementalLayer.add(gene);
-    }
     public void addInParallelLayer(int layer, Gene gene) {
         parallelLayers.get(layer).add(gene);
     }
+
     //endregion
 
     public void append(Gene gene){
@@ -211,19 +200,12 @@ public class Chromosome {
         }
         return possibleValues;
     }
-    public void reset(Chromosome chromosome){
-        parallelLayers = new ArrayList<>();
-        for( List<Gene> layer : chromosome.parallelLayers) {
-            parallelLayers.add(new ArrayList<>(layer));
-        }
-        supplementalLayer = new ArrayList<>(chromosome.supplementalLayer);
-        wires=chromosome.wires;
-    }
+
     @Override
     public String toString() {
         return "Chromosome{" +
                 "parallelLayers=" + parallelLayers +
-                ", supplementalLayer=" + supplementalLayer +
+                ", targetDepth=" + targetDepth +
                 ", wires=" + wires +
                 '}';
     }
@@ -233,17 +215,18 @@ public class Chromosome {
         if (this == o) return true;
         if (!(o instanceof Chromosome)) return false;
         Chromosome that = (Chromosome) o;
-        return parallelLayers.equals(that.parallelLayers) &&
-                Objects.equals(supplementalLayer, that.supplementalLayer);
+        return targetDepth == that.targetDepth &&
+                getWires() == that.getWires() &&
+                Objects.equals(getParallelLayers(), that.getParallelLayers());
     }
+
     @Override
     public int hashCode() {
-        return Objects.hash(parallelLayers, supplementalLayer);
+        return Objects.hash(getParallelLayers(), targetDepth, getWires());
     }
 
-
     public static void main(String[] args) {
-        Chromosome chromosome = new Chromosome(10);
+        Chromosome chromosome = new Chromosome(10,10);
         List<Gene> firstLayer = new ArrayList<Gene>(){{add(new Gene(0,1));}};
         List<Gene> secondLayer = new ArrayList<Gene>(){{add(new Gene(0,2));}};
         chromosome.addParallelLayer(firstLayer);

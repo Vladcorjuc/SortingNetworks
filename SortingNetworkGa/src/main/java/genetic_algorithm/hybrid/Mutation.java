@@ -1,4 +1,4 @@
-package genetic_algorithm;
+package genetic_algorithm.hybrid;
 
 import javafx.util.Pair;
 
@@ -63,7 +63,7 @@ public class Mutation {
 
 
     public static void main(String[] args) {
-        Chromosome chromosome=new Chromosome(4);
+        Chromosome chromosome=new Chromosome(4,10);
         List<Gene> firstLayer = new ArrayList<Gene>(){{add(new Gene(0,1));}};
         List<Gene> secondLayer = new ArrayList<Gene>(){{add(new Gene(0,2));}};
         chromosome.addParallelLayer(firstLayer);

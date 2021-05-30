@@ -1,7 +1,6 @@
 package genetic_algorithm.network;
 
-import genetic_algorithm.Gene;
-import genetic_algorithm.network.Comparator;
+import genetic_algorithm.hybrid.Gene;
 
 import java.util.*;
 

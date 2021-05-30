@@ -1,4 +1,4 @@
-package genetic_algorithm;
+package genetic_algorithm.hybrid;
 
 public class Statistics {
     public static int[] found;

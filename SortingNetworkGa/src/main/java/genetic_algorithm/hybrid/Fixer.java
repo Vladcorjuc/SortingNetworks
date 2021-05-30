@@ -1,5 +1,7 @@
-package genetic_algorithm;
+package genetic_algorithm.hybrid;
 
+import genetic_algorithm.editor.IEditor;
+import genetic_algorithm.editor.RedundancyEditor;
 import genetic_algorithm.network.*;
 import javafx.util.Pair;
 
@@ -8,10 +10,10 @@ import java.util.List;
 import java.util.Random;
 
 public class Fixer {
-    private final Editor editor;
+    private final IEditor editor;
     private final Random random;
 
-    public Fixer(Editor editor){
+    public Fixer(IEditor editor){
         this.editor=editor;
         random=new Random();
     }
@@ -63,7 +65,6 @@ public class Fixer {
                     Network newNetwork = newChromosome.getNetwork();
                     int bads = newNetwork.getBad().size();
                     int comparators = newNetwork.getComparators().size();
-
                     if(bads<networkBads){
                         priorities.get(0).add(new Pair<>(layer,new Gene(i,j)));
                     }
@@ -88,11 +89,10 @@ public class Fixer {
                     else if(bads==minBads){
                         priorities.get(3).add(new Pair<>(layer,new Gene(i,j)));
                     }
-                    */
+                     */
                 }
             }
         }
-
         int layer = -1;
         Gene gene = null;
         for (List<Pair<Integer,Gene>> priority:priorities) {
@@ -129,8 +129,9 @@ public class Fixer {
                 }
             }
         }
-        /*
-        for(Sequence sequence:network.getBad()){
+
+         */
+        /*for(Sequence sequence:network.getBad()){
             List<Pair<Integer,Integer>> badPos = sequence.getBadPositions();
             for(Pair<Integer,Integer> bad: badPos){
                 for(int layer=0;layer<offspring.getParallelLayers().size();layer++){
@@ -142,8 +143,9 @@ public class Fixer {
                 }
             }
         }
+
          */
-        editor.edit(offspring,verbose);
+        editor.edit(offspring,false);
         return offspring;
 
     }
@@ -160,14 +162,14 @@ public class Fixer {
     }
 
     public static void main(String[] args) {
-        Chromosome chromosome=new Chromosome(4);
+        Chromosome chromosome=new Chromosome(4,4);
         List<Gene> firstLayer = new ArrayList<Gene>(){{add(new Gene(0,1));}};
         List<Gene> secondLayer = new ArrayList<Gene>(){{add(new Gene(0,2));}};
         chromosome.addParallelLayer(firstLayer);
         chromosome.addParallelLayer(secondLayer);
 
         System.out.println(chromosome);
-        Fixer fixer=new Fixer(new Editor());
+        Fixer fixer=new Fixer(new RedundancyEditor());
         fixer.repair(chromosome,false);
         System.out.println(chromosome);
 

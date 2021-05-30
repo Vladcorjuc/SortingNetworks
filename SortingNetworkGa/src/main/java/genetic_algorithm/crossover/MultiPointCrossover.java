@@ -1,17 +1,20 @@
-package genetic_algorithm;
+package genetic_algorithm.crossover;
+
+import genetic_algorithm.hybrid.Chromosome;
+import genetic_algorithm.hybrid.Gene;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class MultiPointCrossover implements Crossover {
+public class MultiPointCrossover implements ICrossover {
     @Override
     public Chromosome cross(Chromosome parent0, Chromosome parent1, boolean verbose) {
 
        if(verbose){ System.out.print("Crossing...");}
 
-        Chromosome chromosome=new Chromosome(parent0.getWires());
+        Chromosome chromosome=new Chromosome(parent0.getWires(),parent0.getTargetDepth());
 
         if(parent0.getParallelLayers().size() < parent1.getParallelLayers().size()) {
             Chromosome aux = parent0;
@@ -75,7 +78,7 @@ public class MultiPointCrossover implements Crossover {
     }
 
     public static void main(String[] args) {
-        Chromosome chromosome1 = new Chromosome(10);
+        Chromosome chromosome1 = new Chromosome(10,10);
         chromosome1.addParallelLayer(new ArrayList<>());
         chromosome1.addInParallelLayer(0,new Gene(1,2));
         chromosome1.addInParallelLayer(0,new Gene(3,4));
@@ -86,7 +89,7 @@ public class MultiPointCrossover implements Crossover {
 
         System.out.println(chromosome1+"\n"+chromosome2);
 
-        Crossover crossover=new MultiPointCrossover();
+        ICrossover crossover=new MultiPointCrossover();
         System.out.println(crossover.cross(chromosome1,chromosome2,false));
         System.out.println(chromosome1);
         System.out.println(chromosome2);

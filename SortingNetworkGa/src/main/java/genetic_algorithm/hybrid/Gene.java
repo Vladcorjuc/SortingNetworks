@@ -1,4 +1,4 @@
-package genetic_algorithm;
+package genetic_algorithm.hybrid;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,6 +85,19 @@ public class Gene {
 
         return new Gene(firstWire, secondWire);
 
+    }
+    public static Gene getRandom(int n){
+        List<Integer> possibleValues = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            possibleValues.add(i);
+        }
+        Random random = new Random();
+        int pos= random.nextInt(possibleValues.size());
+        int firstWire = possibleValues.get(pos);
+        possibleValues.remove(pos);
+        pos = random.nextInt(possibleValues.size());
+        int secondWire = possibleValues.get(pos);
+        return new Gene(firstWire,secondWire);
     }
 
     public boolean contains(int wire) {
