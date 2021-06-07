@@ -1,4 +1,4 @@
-package genetic_algorithm.simple;
+package genetic_algorithm.composite_objective;
 
 import genetic_algorithm.hybrid.Gene;
 
@@ -14,7 +14,7 @@ public class IndirectReplacementMutation {
     }
 
     public void mutate(Chromosome chromosome){
-        if(random.nextDouble()>_randomFactor) {
+        if(random.nextDouble()<_randomFactor) {
             int randomPosition = random.nextInt(chromosome.getComparators().size());
             chromosome.getComparators().set(randomPosition, Gene.getRandom(chromosome.getWires()));
         }

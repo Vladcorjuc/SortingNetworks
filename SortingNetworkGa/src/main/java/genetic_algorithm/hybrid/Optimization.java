@@ -1,7 +1,7 @@
 package genetic_algorithm.hybrid;
 
-import genetic_algorithm.editor.IEditor;
-import genetic_algorithm.editor.RedundancyEditor;
+import genetic_algorithm.hybrid.editor.IEditor;
+import genetic_algorithm.hybrid.editor.RedundancyEditor;
 
 import java.util.ArrayList;
 import java.util.List;

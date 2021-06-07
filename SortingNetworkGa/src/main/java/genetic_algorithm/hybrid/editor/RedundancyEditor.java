@@ -1,4 +1,4 @@
-package genetic_algorithm.editor;
+package genetic_algorithm.hybrid.editor;
 
 import genetic_algorithm.hybrid.Chromosome;
 import genetic_algorithm.hybrid.Gene;

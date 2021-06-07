@@ -2,47 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ae347a-0aa1-4e6c-8875-2a9364fb1ea6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/editor/IEditor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/composite_objective/Chromosome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/composite_objective/CompositeGeneticAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/composite_objective/Population.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/mutation/IMutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Chromosome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Crossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/crossover/ICrossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Editor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Fixer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Fixer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Gene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Gene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/GeneticAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/GeneticAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/MultiPointCrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/crossover/MultiPointCrossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Mutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Mutation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Optimization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Optimization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Population.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/SinglePointCrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/crossover/SinglePointCrossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Statistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/crossover/ICrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/crossover/ICrossover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/crossover/MultiPointCrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/crossover/MultiPointCrossover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/crossover/SinglePointCrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/crossover/SinglePointCrossover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/editor/CorrectWireEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/editor/CorrectWireEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/editor/IEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/editor/IEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/editor/RedundancyEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/editor/RedundancyEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Fixer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Fixer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Gene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Gene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/GeneticAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/HybridGeneticAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Mutation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Optimization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Optimization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Population.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Statistics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/network/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/network/Network.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/network/Sequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/network/Sequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/network/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/network/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Chromosome$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Chromosome$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Chromosome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Crossover.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Editor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Fixer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Fixer$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Fixer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Gene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/GeneticAlgorithm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/MultiPointCrossover.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Mutation$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Mutation$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Mutation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Optimization$GeneList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Optimization.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Population.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/SinglePointCrossover.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/Statistics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/simple/Chromosome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/simple/Crossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/composite_objective/Crossover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/simple/GeneticAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/simple/IndirectReplacementMutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/composite_objective/IndirectReplacementMutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/simple/Population.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/network/Network.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/genetic_algorithm/network/Network.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/network/Sequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/genetic_algorithm/network/Sequence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/network/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/genetic_algorithm/network/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,27 +70,28 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\GitHubProject\SortingNetworkGa\src\main\java\genetic_algorithm\ui" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="genetic_algorithm.simple" />
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\GitHubProject\SortingNetworkGa\src\main\resources" />
       <recent name="E:\GitHubProject\SortingNetworkGa\src\main\java" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHubProject\SortingNetworkGa\src\main\java\genetic_algorithm\ui" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="GeneticAlgorithm (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="genetic_algorithm.simple.GeneticAlgorithm" />
+    <configuration name="CompositeGeneticAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="genetic_algorithm.composite_objective.CompositeGeneticAlgorithm" />
       <module name="SortingNetworkGa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="genetic_algorithm.simple.*" />
+          <option name="PATTERN" value="genetic_algorithm.composite_objective.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,8 +99,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GeneticAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="genetic_algorithm.hybrid.GeneticAlgorithm" />
+    <configuration name="HybridGeneticAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="genetic_algorithm.hybrid.HybridGeneticAlgorithm" />
       <module name="SortingNetworkGa" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,11 +120,11 @@
       </method>
     </configuration>
     <configuration name="MultiPointCrossover" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="genetic_algorithm.crossover.MultiPointCrossover" />
+      <option name="MAIN_CLASS_NAME" value="genetic_algorithm.hybrid.crossover.MultiPointCrossover" />
       <module name="SortingNetworkGa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="genetic_algorithm.crossover.*" />
+          <option name="PATTERN" value="genetic_algorithm.hybrid.crossover.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -159,17 +146,17 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.GeneticAlgorithm" />
       <item itemvalue="Application.Network" />
       <item itemvalue="Application.MultiPointCrossover" />
-      <item itemvalue="Application.GeneticAlgorithm (1)" />
       <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.CompositeGeneticAlgorithm" />
+      <item itemvalue="Application.HybridGeneticAlgorithm" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.GeneticAlgorithm (1)" />
-        <item itemvalue="Application.GeneticAlgorithm" />
+        <item itemvalue="Application.CompositeGeneticAlgorithm" />
+        <item itemvalue="Application.HybridGeneticAlgorithm" />
         <item itemvalue="Application.MultiPointCrossover" />
         <item itemvalue="Application.Network" />
       </list>
@@ -194,7 +181,9 @@
       <workItem from="1621946496454" duration="2256000" />
       <workItem from="1621950002649" duration="7268000" />
       <workItem from="1622121885805" duration="94000" />
-      <workItem from="1622144980239" duration="16571000" />
+      <workItem from="1622144980239" duration="17821000" />
+      <workItem from="1622565005741" duration="16630000" />
+      <workItem from="1622988789445" duration="6945000" />
     </task>
     <servers />
   </component>
@@ -210,42 +199,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1622121927098" />
-    <state x="578" y="132" key="#com.intellij.ide.util.MemberChooser" timestamp="1622388279876">
+    <state x="578" y="132" key="#com.intellij.ide.util.MemberChooser" timestamp="1622990097171">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="132" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1622388279876" />
-    <state x="432" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1621890893945">
+    <state x="578" y="132" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1622990097171" />
+    <state x="432" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1622992010284">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="432" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1621890893945" />
+    <state x="432" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1622992010284" />
     <state x="566" y="272" width="403" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1621894622157">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="272" width="403" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1621894622157" />
-    <state x="374" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1622145431318">
+    <state x="374" y="0" width="995" height="823" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1622991960877">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="374" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1622145431318" />
+    <state x="374" y="0" width="995" height="823" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1622991960877" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1622022979221">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1622022979221" />
-    <state width="1342" height="192" key="GridCell.Tab.0.bottom" timestamp="1622404958766">
+    <state width="1342" height="192" key="GridCell.Tab.0.bottom" timestamp="1622995211093">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="192" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622404958766" />
-    <state width="1342" height="192" key="GridCell.Tab.0.center" timestamp="1622404958765">
+    <state width="1342" height="192" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622995211093" />
+    <state width="1342" height="192" key="GridCell.Tab.0.center" timestamp="1622995211093">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="192" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1622404958765" />
-    <state width="1342" height="192" key="GridCell.Tab.0.left" timestamp="1622404958765">
+    <state width="1342" height="192" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1622995211093" />
+    <state width="1342" height="192" key="GridCell.Tab.0.left" timestamp="1622995211093">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="192" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1622404958765" />
-    <state width="1342" height="192" key="GridCell.Tab.0.right" timestamp="1622404958765">
+    <state width="1342" height="192" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1622995211093" />
+    <state width="1342" height="192" key="GridCell.Tab.0.right" timestamp="1622995211093">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1342" height="192" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1622404958765" />
+    <state width="1342" height="192" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1622995211093" />
     <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1621897483892">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -266,10 +255,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1621891362636" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1622144979188">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1622988788074">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1622144979188" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1622988788074" />
     <state x="417" y="96" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1621508488475">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -286,10 +275,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="511" y="31" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1622145615925" />
-    <state x="429" y="191" key="run.anything.popup" timestamp="1622386452946">
+    <state x="429" y="191" key="run.anything.popup" timestamp="1622567508618">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="429" y="191" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1622386452946" />
+    <state x="429" y="191" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1622567508618" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1622019534728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

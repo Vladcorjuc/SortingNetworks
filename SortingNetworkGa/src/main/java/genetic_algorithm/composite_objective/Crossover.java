@@ -1,4 +1,4 @@
-package genetic_algorithm.simple;
+package genetic_algorithm.composite_objective;
 
 
 import java.util.Random;

@@ -8,6 +8,7 @@ public class Network {
     private Set<Sequence> outputs = null;
     private Set<Sequence> bad=null;
     private Set<Comparator> redundantComparators = null;
+    private int swaps=-1;
 
     //region Constructors
     public Network(int wires) {
@@ -30,6 +31,13 @@ public class Network {
     }
     //endregion
     //region Getters
+    public int getSwaps(){
+        if(swaps<0){
+            swaps=0;
+            outputs();
+        }
+        return swaps;
+    }
     public int getWires() {
         return wires;
     }
@@ -68,8 +76,8 @@ public class Network {
     }
     public boolean isRedundant(Comparator comparator){return isRedundant(comparator.getStartingWire(),comparator.getEndingWire());}
     public boolean isSorting() {
-        //return outputs().size() == (wires+1);
-        return getBad().size() == 0;
+        return outputs().size() == (wires+1);
+        //return getBad().size() == 0;
     }
     public Set<Comparator> getRedundantComparators(){
         if(redundantComparators==null){
@@ -165,6 +173,7 @@ public class Network {
             for (Comparator c : layer.getAll()) {
                 Sequence output = useComparator(c, input);
                 if (output != null) {
+                    swaps++;
                     input = output;
                 }
             }
@@ -317,6 +326,7 @@ public class Network {
         network.addComparator(new Comparator(1,4));
         System.out.println(network.visualize());
     }
+
 
 
 }

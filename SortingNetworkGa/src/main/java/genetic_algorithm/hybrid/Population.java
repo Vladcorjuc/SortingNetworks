@@ -1,7 +1,7 @@
 package genetic_algorithm.hybrid;
 
-import genetic_algorithm.editor.IEditor;
-import genetic_algorithm.editor.RedundancyEditor;
+import genetic_algorithm.hybrid.editor.IEditor;
+import genetic_algorithm.hybrid.editor.RedundancyEditor;
 import genetic_algorithm.network.Network;
 import genetic_algorithm.network.Utils;
 import javafx.util.Pair;
@@ -154,7 +154,7 @@ public class Population {
         Function<Chromosome,Double> fitness;
         IEditor editor;
         Fixer fixer;
-        fitness = GeneticAlgorithm::evaluate;
+        fitness = HybridGeneticAlgorithm::evaluate;
         editor = new RedundancyEditor();
         fixer = new Fixer(editor);
         Population population = Population.initialize(5, 4,4,5,fitness,editor,fixer,false);

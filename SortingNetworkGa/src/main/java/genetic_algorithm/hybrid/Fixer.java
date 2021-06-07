@@ -1,7 +1,8 @@
 package genetic_algorithm.hybrid;
 
-import genetic_algorithm.editor.IEditor;
-import genetic_algorithm.editor.RedundancyEditor;
+import genetic_algorithm.Statistics;
+import genetic_algorithm.hybrid.editor.IEditor;
+import genetic_algorithm.hybrid.editor.RedundancyEditor;
 import genetic_algorithm.network.*;
 import javafx.util.Pair;
 
@@ -39,6 +40,7 @@ public class Fixer {
 
         //System.out.println(offspring);
         offspring.append(new Gene(selectedComparator.getStartingWire(),selectedComparator.getEndingWire()));
+        Statistics.ComparatorAdded();
         return new Pair<>(offspring,newNetwork);
     }
     private Chromosome insert(Chromosome offspring, Network network,boolean verbose){
@@ -100,6 +102,7 @@ public class Fixer {
                 layer = toAdd.getKey();
                 gene = toAdd.getValue();
                 if(offspring.canAddInParallelLayer(layer,gene)){
+                    Statistics.ComparatorAdded();
                     offspring.addInParallelLayer(layer,gene);
                 }
 

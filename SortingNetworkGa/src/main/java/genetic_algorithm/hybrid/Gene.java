@@ -94,9 +94,12 @@ public class Gene {
         Random random = new Random();
         int pos= random.nextInt(possibleValues.size());
         int firstWire = possibleValues.get(pos);
+
         possibleValues.remove(pos);
+
         pos = random.nextInt(possibleValues.size());
         int secondWire = possibleValues.get(pos);
+
         return new Gene(firstWire,secondWire);
     }
 

@@ -1,4 +1,4 @@
-package genetic_algorithm.hybrid;
+package genetic_algorithm;
 
 public class Statistics {
     public static int[] found;
@@ -28,7 +28,7 @@ public class Statistics {
     public static void mutationOccurred(){
         mutations++;
     }
-    public static void mutationAdded(){
+    public static void ComparatorAdded(){
         added++;
     }
 

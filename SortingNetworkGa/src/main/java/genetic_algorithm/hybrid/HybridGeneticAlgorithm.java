@@ -1,15 +1,18 @@
 package genetic_algorithm.hybrid;
-import genetic_algorithm.crossover.ICrossover;
-import genetic_algorithm.crossover.SinglePointCrossover;
-import genetic_algorithm.editor.CorrectWireEditor;
-import genetic_algorithm.editor.IEditor;
+import genetic_algorithm.Statistics;
+import genetic_algorithm.hybrid.crossover.ICrossover;
+import genetic_algorithm.hybrid.crossover.SinglePointCrossover;
+import genetic_algorithm.hybrid.editor.CorrectWireEditor;
+import genetic_algorithm.hybrid.editor.IEditor;
+import genetic_algorithm.hybrid.mutation.IMutation;
+import genetic_algorithm.hybrid.mutation.SimpleMutation;
 import genetic_algorithm.network.Utils;
 import javafx.util.Pair;
 
 import java.util.function.Function;
 import genetic_algorithm.network.Network;
 
-public class GeneticAlgorithm {
+public class HybridGeneticAlgorithm {
     private int populationSize;
     private int runs;
     private int generations;
@@ -17,22 +20,22 @@ public class GeneticAlgorithm {
 
     private final Function<Chromosome,Double> fitness;
     private final ICrossover crossover;
-    private final Mutation mutation;
+    private final IMutation mutation;
     private final IEditor editor;
     private final Fixer fixer;
     private final Helper helper;
     private final IEditor cleaner = new CorrectWireEditor();
     private final Optimization optimization;
 
-    public GeneticAlgorithm(int populationSize, int runs,ICrossover crossover ,IEditor editor,
-                            Helper helper,boolean verbose) {
+    public HybridGeneticAlgorithm(int populationSize, int runs, ICrossover crossover , IEditor editor, IMutation mutation,
+                                  Helper helper, boolean verbose) {
         this.populationSize = populationSize;
         this.runs = runs;
         this.generations = Integer.MAX_VALUE;
 
-        fitness = GeneticAlgorithm::evaluate;
+        fitness = HybridGeneticAlgorithm::evaluate;
         this.crossover = crossover;
-        mutation = new Mutation(0.03);
+        this.mutation = mutation;
         this.editor=editor;
         fixer = new Fixer(editor);
         optimization = new Optimization(editor, fixer);
@@ -41,15 +44,15 @@ public class GeneticAlgorithm {
 
         Statistics.initialize(runs);
     }
-    public GeneticAlgorithm(int populationSize, int runs, int generations,ICrossover crossover ,
-                            IEditor editor,Helper helper,boolean verbose) {
+    public HybridGeneticAlgorithm(int populationSize, int runs, int generations, ICrossover crossover ,
+                                  IEditor editor, IMutation mutation, Helper helper, boolean verbose) {
         this.populationSize = populationSize;
         this.runs = runs;
         this.generations = generations;
 
-        fitness = GeneticAlgorithm::evaluate;
+        fitness = HybridGeneticAlgorithm::evaluate;
         this.crossover = crossover;
-        mutation = new Mutation(0.03);
+        this.mutation = mutation;
         this.editor=editor;
         fixer = new Fixer(editor);
         optimization = new Optimization(editor,fixer);
@@ -60,14 +63,14 @@ public class GeneticAlgorithm {
         Statistics.initialize(runs);
     }
 
-    public Network getSortedNetwork(int n,int d){
+    public Network getSortedNetwork(int n,int optimalDepth,int upperDepth){
 
         Pair<Chromosome,Double> maxFit=new Pair<>(null,0.0);
         Pair<Integer,Double> generationMaxFit = new Pair<>(-1,-1.0);
 
         for(int i=0;i<runs;i++) {
             System.out.println("Run: "+i);
-            Population population = Population.initialize(n, d,d,populationSize,fitness,editor,fixer,verbose);
+            Population population = Population.initialize(n, optimalDepth,upperDepth,populationSize,fitness,editor,fixer,verbose);
             long startTime = System.nanoTime();
             int generation = 0;
             while (generation < generations) {
@@ -139,9 +142,9 @@ public class GeneticAlgorithm {
     }
 
     public static void main(String[] args) {
-        GeneticAlgorithm geneticAlgorithm=new GeneticAlgorithm(100,1,
-                new SinglePointCrossover(),new CorrectWireEditor(),null,false);
-        Network network = geneticAlgorithm.getSortedNetwork(9,7);
+        HybridGeneticAlgorithm hybridGeneticAlgorithm =new HybridGeneticAlgorithm(100,1,
+                new SinglePointCrossover(),new CorrectWireEditor(),new SimpleMutation(0.03),null,false);
+        Network network = hybridGeneticAlgorithm.getSortedNetwork(9,7,7);
         System.out.println(network.getLayers().size()+" "+network.getComparators().size());
         System.out.println(Statistics.get());
     }

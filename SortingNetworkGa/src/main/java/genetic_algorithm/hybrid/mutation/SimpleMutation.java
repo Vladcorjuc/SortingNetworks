@@ -1,21 +1,23 @@
-package genetic_algorithm.hybrid;
+package genetic_algorithm.hybrid.mutation;
 
+import genetic_algorithm.hybrid.Chromosome;
+import genetic_algorithm.hybrid.Gene;
+import genetic_algorithm.Statistics;
 import javafx.util.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Mutation {
-    Random random;
+public class SimpleMutation implements IMutation {
     private double _randomFactor;
-
-    public Mutation(double _randomFactor) {
-        this._randomFactor = _randomFactor;
+    private Random random;
+    public SimpleMutation(double _randomFactor) {
+       this._randomFactor = _randomFactor;
         random=new Random();
     }
-
-    public void  mutate(Chromosome offspring,boolean verbose) {
+    @Override
+    public void  mutate(Chromosome offspring, boolean verbose) {
         if(verbose){System.out.print("Mutating...");}
         for(int layer=0;layer<offspring.getParallelLayers().size();layer++){
             List<Pair<Integer,Integer>> toCorrect = new ArrayList<>();
@@ -34,7 +36,7 @@ public class Mutation {
                     }
                 }
 
-                if (Math.random() <= _randomFactor) {
+                if (random.nextDouble() <= _randomFactor) {
                     Statistics.mutationOccurred();
                     int newWire = getNewWire(gene, offspring.getWires());
                     int oldWire =-1;
@@ -52,27 +54,11 @@ public class Mutation {
         if(verbose){System.out.println("Done");}
 
     }
-
-    private int getNewWire(Gene gene,int wires){
+    private int getNewWire(Gene gene, int wires){
         int newWire = gene.getWire0();
         while(gene.contains(newWire)){
             newWire = random.nextInt(wires);
         }
         return newWire;
-    }
-
-
-    public static void main(String[] args) {
-        Chromosome chromosome=new Chromosome(4,10);
-        List<Gene> firstLayer = new ArrayList<Gene>(){{add(new Gene(0,1));}};
-        List<Gene> secondLayer = new ArrayList<Gene>(){{add(new Gene(0,2));}};
-        chromosome.addParallelLayer(firstLayer);
-        chromosome.addParallelLayer(secondLayer);
-
-        System.out.println(chromosome);
-        Mutation mutation=new Mutation(1);
-        mutation.mutate(chromosome,false);
-        System.out.println(chromosome);
-
     }
 }

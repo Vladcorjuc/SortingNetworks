@@ -1,4 +1,4 @@
-package genetic_algorithm.crossover;
+package genetic_algorithm.hybrid.crossover;
 
 import genetic_algorithm.hybrid.Chromosome;
 import genetic_algorithm.hybrid.Gene;
