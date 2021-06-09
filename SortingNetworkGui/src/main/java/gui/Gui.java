@@ -37,9 +37,6 @@ public class Gui extends javax.swing.JFrame {
     }
     
     public void initVideo(){
-        Fullscreen.setVisible(false);
-        Fullscreen.setEnabled(false);
-        
         
         File video_source = new File("src//main//resources//video.mp4");
         Media m = new Media(video_source.toURI().toString());
