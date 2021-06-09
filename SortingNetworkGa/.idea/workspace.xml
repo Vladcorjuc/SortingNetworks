@@ -2,33 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ae347a-0aa1-4e6c-8875-2a9364fb1ea6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/composite_objective/Chromosome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/composite_objective/CompositeGeneticAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/composite_objective/Population.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/mutation/IMutation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/crossover/ICrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/crossover/ICrossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/crossover/MultiPointCrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/crossover/MultiPointCrossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/crossover/SinglePointCrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/crossover/SinglePointCrossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/editor/CorrectWireEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/editor/CorrectWireEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/editor/IEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/editor/IEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/editor/RedundancyEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/editor/RedundancyEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Fixer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Fixer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Gene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Gene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/GeneticAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/HybridGeneticAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Mutation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Optimization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Optimization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Population.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/hybrid/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/Statistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/network/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/network/Network.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/simple/Chromosome.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/simple/Crossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/composite_objective/Crossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/simple/GeneticAlgorithm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/simple/IndirectReplacementMutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/genetic_algorithm/composite_objective/IndirectReplacementMutation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/genetic_algorithm/simple/Population.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/genetic_algorithm/network/Network.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/genetic_algorithm/network/Network.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/src/main/java/gui/Gui.form" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/src/main/java/gui/Gui.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/src/main/java/gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/src/main/java/gui/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/src/main/resources/Home.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/src/main/resources/Home.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/src/main/resources/Show.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/src/main/resources/Show.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/src/main/resources/Tutorial-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/src/main/resources/Tutorial-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/src/main/resources/Tutorial.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/src/main/resources/Tutorial.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/src/main/resources/video.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/src/main/resources/video.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/SortingNetworkGui-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/SortingNetworkGui-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/Home.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/Home.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/Show.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/Show.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/Tutorial-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/Tutorial-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/Tutorial.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/Tutorial.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/gui/Gui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/video.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/classes/video.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGui/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGui/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

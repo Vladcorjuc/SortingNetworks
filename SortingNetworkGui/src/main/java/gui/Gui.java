@@ -1,4 +1,3 @@
-
 package gui;
 
 import java.awt.*;
@@ -8,8 +7,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Objects;
 
-import genetic_algorithm.GeneticAlgorithm;
-import genetic_algorithm.network.Network;
+
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.DoubleProperty;
 import javafx.embed.swing.JFXPanel;
@@ -21,7 +19,6 @@ import javafx.scene.media.MediaView;
 import javafx.stage.Screen;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
 
 /**
  *
@@ -40,6 +37,10 @@ public class Gui extends javax.swing.JFrame {
     }
     
     public void initVideo(){
+        Fullscreen.setVisible(false);
+        Fullscreen.setEnabled(false);
+        
+        
         File video_source = new File("src//main//resources//video.mp4");
         Media m = new Media(video_source.toURI().toString());
         player = new MediaPlayer(m);
@@ -51,7 +52,7 @@ public class Gui extends javax.swing.JFrame {
         // center video position
         javafx.geometry.Rectangle2D screen = Screen.getPrimary().getVisualBounds();
         viewer.setX((screen.getWidth() - VideoPlayer.getWidth()) / 2);
-        viewer.setY((screen.getHeight() -VideoPlayer.getHeight()) / 2);
+        viewer.setY((screen.getHeight() - VideoPlayer.getHeight()) / 2);
 
         // resize video based on screen size
         DoubleProperty width = viewer.fitWidthProperty();
@@ -86,6 +87,14 @@ public class Gui extends javax.swing.JFrame {
         
         Show.setVisible(false);
         Show.setEnabled(false);
+        
+        Hibrid.setVisible(false);
+        Hibrid.setVisible(false);
+        
+        Cmo.setVisible(false);
+        Cmo.setVisible(false);
+        
+        
     }
 
     /**
@@ -97,6 +106,7 @@ public class Gui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel6 = new javax.swing.JLabel();
         Menu = new javax.swing.JPanel();
         tutorial = new javax.swing.JLabel();
         found = new javax.swing.JLabel();
@@ -109,29 +119,39 @@ public class Gui extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         Tutorial2 = new javax.swing.JPanel();
         BackToTutorial = new javax.swing.JLabel();
-        VideoPlayer = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        VideoPlayer = new javax.swing.JPanel();
         Try_Algorithm = new javax.swing.JPanel();
         ComputeAlgorithm = new javax.swing.JLabel();
         BackToMenuFromAlgorithm = new javax.swing.JLabel();
-        NAlgorithm = new javax.swing.JComboBox<>();
-        DAlgorithm = new javax.swing.JComboBox<>();
-        AlgorithmPanel = new javax.swing.JPanel();
+        to_hibrid = new javax.swing.JLabel();
+        to_cmo = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         Show = new javax.swing.JPanel();
         ComputeShow = new javax.swing.JLabel();
         BackToMenuFromShow = new javax.swing.JLabel();
-        NShow = new javax.swing.JComboBox<>();
         ShowPanel = new javax.swing.JPanel();
+        NShow = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
+        Hibrid = new javax.swing.JPanel();
+        BackToSelectFromHibrid = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        Cmo = new javax.swing.JPanel();
+        BackToSelectFromCmo = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+
+        jLabel6.setText("jLabel6");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sorting Networks");
         setIconImages(null);
-        setPreferredSize(new java.awt.Dimension(825, 650));
+        setMinimumSize(new java.awt.Dimension(1040, 815));
+        setPreferredSize(new java.awt.Dimension(1040, 815));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Menu.setBackground(new java.awt.Color(255, 255, 255));
+        Menu.setMinimumSize(new java.awt.Dimension(1024, 768));
+        Menu.setPreferredSize(new java.awt.Dimension(1024, 768));
         Menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tutorial.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -139,36 +159,40 @@ public class Gui extends javax.swing.JFrame {
                 tutorialMouseClicked(evt);
             }
         });
-        Menu.add(tutorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 420, 20));
+        Menu.add(tutorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 490, 60));
 
         found.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 foundMouseClicked(evt);
             }
         });
-        Menu.add(found, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 440, 20));
+        Menu.add(found, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 500, 70));
 
         try_algorithm.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 try_algorithmMouseClicked(evt);
             }
         });
-        Menu.add(try_algorithm, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 440, 20));
+        Menu.add(try_algorithm, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 500, 70));
 
         credits.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 creditsMouseClicked(evt);
             }
         });
-        Menu.add(credits, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, 450, 20));
+        Menu.add(credits, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 510, 510, 60));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Home.png"))); // NOI18N
-        Menu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 610));
+        jLabel1.setMaximumSize(new java.awt.Dimension(1024, 768));
+        jLabel1.setMinimumSize(new java.awt.Dimension(1024, 768));
+        Menu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
 
-        getContentPane().add(Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 610));
+        getContentPane().add(Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
 
         Tutorial1.setBackground(new java.awt.Color(255, 255, 255));
+        Tutorial1.setMinimumSize(new java.awt.Dimension(1024, 768));
+        Tutorial1.setPreferredSize(new java.awt.Dimension(1024, 768));
         Tutorial1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         NextTutorial.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -176,21 +200,23 @@ public class Gui extends javax.swing.JFrame {
                 NextTutorialMouseClicked(evt);
             }
         });
-        Tutorial1.add(NextTutorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 510, 80, 30));
+        Tutorial1.add(NextTutorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 630, 150, 50));
 
         BackToMenu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BackToMenuMouseClicked(evt);
             }
         });
-        Tutorial1.add(BackToMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 560, 90, 40));
+        Tutorial1.add(BackToMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 700, 130, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tutorial.png"))); // NOI18N
-        Tutorial1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 610));
+        Tutorial1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
 
-        getContentPane().add(Tutorial1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 610));
+        getContentPane().add(Tutorial1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         Tutorial2.setBackground(new java.awt.Color(255, 255, 255));
+        Tutorial2.setMinimumSize(new java.awt.Dimension(1024, 768));
+        Tutorial2.setPreferredSize(new java.awt.Dimension(1024, 768));
         Tutorial2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BackToTutorial.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -198,29 +224,29 @@ public class Gui extends javax.swing.JFrame {
                 BackToTutorialMouseClicked(evt);
             }
         });
-        Tutorial2.add(BackToTutorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 510, 80, 50));
+        Tutorial2.add(BackToTutorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 720, 140, 40));
 
-        VideoPlayer.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tutorial-2.png"))); // NOI18N
+        Tutorial2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1030, 770));
 
         javax.swing.GroupLayout VideoPlayerLayout = new javax.swing.GroupLayout(VideoPlayer);
         VideoPlayer.setLayout(VideoPlayerLayout);
         VideoPlayerLayout.setHorizontalGroup(
             VideoPlayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 590, Short.MAX_VALUE)
+            .addGap(0, 930, Short.MAX_VALUE)
         );
         VideoPlayerLayout.setVerticalGroup(
             VideoPlayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 330, Short.MAX_VALUE)
+            .addGap(0, 460, Short.MAX_VALUE)
         );
 
-        Tutorial2.add(VideoPlayer, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 590, 330));
+        Tutorial2.add(VideoPlayer, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 930, 460));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Tutorial-2.png"))); // NOI18N
-        Tutorial2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 620));
-
-        getContentPane().add(Tutorial2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 620));
+        getContentPane().add(Tutorial2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
 
         Try_Algorithm.setBackground(new java.awt.Color(255, 255, 255));
+        Try_Algorithm.setMinimumSize(new java.awt.Dimension(1024, 768));
+        Try_Algorithm.setPreferredSize(new java.awt.Dimension(1024, 768));
         Try_Algorithm.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ComputeAlgorithm.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -235,45 +261,32 @@ public class Gui extends javax.swing.JFrame {
                 BackToMenuFromAlgorithmMouseClicked(evt);
             }
         });
-        Try_Algorithm.add(BackToMenuFromAlgorithm, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 560, 90, 40));
+        Try_Algorithm.add(BackToMenuFromAlgorithm, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 680, 150, 50));
 
-        NAlgorithm.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "  2", "  3", "  4", "  5", "  6", "  7", "  8", "  9", "  10", "  11", "  12", "  13", "  14", "  15", "  16" }));
-        NAlgorithm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NAlgorithmActionPerformed(evt);
+        to_hibrid.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                to_hibridMouseClicked(evt);
             }
         });
-        Try_Algorithm.add(NAlgorithm, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 80, 40));
+        Try_Algorithm.add(to_hibrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 540, 90));
+        to_hibrid.getAccessibleContext().setAccessibleName("hibrid");
 
-        DAlgorithm.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "  1", "  2", "  3", "  4", "  5", "  6", "  7", "  8", "  9", "  10", "  11", "  12", "  13", "  14", "  15", "  16", "  17", "  18", "  19", "  20" }));
-        DAlgorithm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DAlgorithmActionPerformed(evt);
+        to_cmo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                to_cmoMouseClicked(evt);
             }
         });
-        Try_Algorithm.add(DAlgorithm, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, 80, 40));
+        Try_Algorithm.add(to_cmo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, 560, 90));
 
-        AlgorithmPanel.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Select the algorithm.png"))); // NOI18N
+        jLabel4.setText("aaaaaaaasddddddddddddddddddddddddddddddddddd");
+        Try_Algorithm.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 770));
 
-        javax.swing.GroupLayout AlgorithmPanelLayout = new javax.swing.GroupLayout(AlgorithmPanel);
-        AlgorithmPanel.setLayout(AlgorithmPanelLayout);
-        AlgorithmPanelLayout.setHorizontalGroup(
-            AlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 690, Short.MAX_VALUE)
-        );
-        AlgorithmPanelLayout.setVerticalGroup(
-            AlgorithmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
-        );
-
-        Try_Algorithm.add(AlgorithmPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 690, 380));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Try.png"))); // NOI18N
-        Try_Algorithm.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 620));
-
-        getContentPane().add(Try_Algorithm, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 620));
+        getContentPane().add(Try_Algorithm, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
 
         Show.setBackground(new java.awt.Color(255, 255, 255));
+        Show.setMinimumSize(new java.awt.Dimension(1024, 768));
+        Show.setPreferredSize(new java.awt.Dimension(1024, 768));
         Show.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ComputeShow.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -281,22 +294,14 @@ public class Gui extends javax.swing.JFrame {
                 ComputeShowMouseClicked(evt);
             }
         });
-        Show.add(ComputeShow, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 120, 80, 50));
+        Show.add(ComputeShow, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 110, 140, 60));
 
         BackToMenuFromShow.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BackToMenuFromShowMouseClicked(evt);
             }
         });
-        Show.add(BackToMenuFromShow, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 560, 90, 40));
-
-        NShow.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "  2", "  3", "  4", "  5", "  6", "  7", "  8", "  9", "  10", "  11", "  12", "  13", "  14", "  15", "  16" }));
-        NShow.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NShowActionPerformed(evt);
-            }
-        });
-        Show.add(NShow, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, 70, 40));
+        Show.add(BackToMenuFromShow, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 690, 130, 50));
 
         ShowPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -304,20 +309,61 @@ public class Gui extends javax.swing.JFrame {
         ShowPanel.setLayout(ShowPanelLayout);
         ShowPanelLayout.setHorizontalGroup(
             ShowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 690, Short.MAX_VALUE)
+            .addGap(0, 720, Short.MAX_VALUE)
         );
         ShowPanelLayout.setVerticalGroup(
             ShowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGap(0, 440, Short.MAX_VALUE)
         );
 
-        Show.add(ShowPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 690, 380));
+        Show.add(ShowPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 720, 440));
+
+        NShow.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        NShow.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "  2", "  3", "  4", "  5", "  6", "  7", "  8", "  9", "  10", "  11", "  12", "  13", "  14", "  15", "  16" }));
+        NShow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NShowActionPerformed(evt);
+            }
+        });
+        Show.add(NShow, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 80, 40));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Show.png"))); // NOI18N
-        Show.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 620));
+        Show.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 770));
 
-        getContentPane().add(Show, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 620));
+        getContentPane().add(Show, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
+
+        Hibrid.setBackground(new java.awt.Color(255, 255, 255));
+        Hibrid.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BackToSelectFromHibrid.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BackToSelectFromHibridMouseClicked(evt);
+            }
+        });
+        Hibrid.add(BackToSelectFromHibrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 700, 140, 50));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Hibrid.png"))); // NOI18N
+        jLabel7.setText("aaaaaaaasddddddddddddddddddddddddddddddddddd");
+        Hibrid.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
+
+        getContentPane().add(Hibrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
+
+        Cmo.setBackground(new java.awt.Color(255, 255, 255));
+        Cmo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BackToSelectFromCmo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BackToSelectFromCmoMouseClicked(evt);
+            }
+        });
+        Cmo.add(BackToSelectFromCmo, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 690, 130, 50));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CMO.png"))); // NOI18N
+        jLabel8.setText("aaaaaaaasddddddddddddddddddddddddddddddddddd");
+        Cmo.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
+
+        getContentPane().add(Cmo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -330,49 +376,29 @@ public class Gui extends javax.swing.JFrame {
         Menu.setVisible(false);
         Menu.setEnabled(false);
         
-        Tutorial2.setVisible(false);
-        Tutorial2.setEnabled(false);
-        
-        Try_Algorithm.setVisible(false);
-        Try_Algorithm.setEnabled(false);
-        
-        Show.setVisible(false);
-        Show.setEnabled(false);
         
     }//GEN-LAST:event_tutorialMouseClicked
 
     private void foundMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_foundMouseClicked
-        Tutorial2.setVisible(false);
-        Tutorial2.setEnabled(false);
-        
+      
         Menu.setVisible(false);
         Menu.setEnabled(false);
         
-        Tutorial1.setVisible(false);
-        Tutorial1.setEnabled(false);
-        
-        Try_Algorithm.setVisible(false);
-        Try_Algorithm.setEnabled(false);
-        
+      
         Show.setVisible(true);
         Show.setEnabled(true);
+       
+       
     }//GEN-LAST:event_foundMouseClicked
 
     private void try_algorithmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_try_algorithmMouseClicked
-        Tutorial2.setVisible(false);
-        Tutorial2.setEnabled(false);
-        
+
         Menu.setVisible(false);
         Menu.setEnabled(false);
-        
-        Tutorial1.setVisible(false);
-        Tutorial1.setEnabled(false);
         
         Try_Algorithm.setVisible(true);
         Try_Algorithm.setEnabled(true);
         
-        Show.setVisible(false);
-        Show.setEnabled(false);
     }//GEN-LAST:event_try_algorithmMouseClicked
 
     private void creditsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_creditsMouseClicked
@@ -382,24 +408,14 @@ public class Gui extends javax.swing.JFrame {
     
     
     
-    
     private void NextTutorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextTutorialMouseClicked
         
         Tutorial2.setVisible(true);
         Tutorial2.setEnabled(true);
         
-        Menu.setVisible(false);
-        Menu.setEnabled(false);
         
         Tutorial1.setVisible(false);
         Tutorial1.setEnabled(false);
-        
-        Try_Algorithm.setVisible(false);
-        Try_Algorithm.setEnabled(false);
-        
-        Show.setVisible(false);
-        Show.setEnabled(false);
-        
         player.play();
         
         
@@ -425,65 +441,37 @@ public class Gui extends javax.swing.JFrame {
         
         Show.setVisible(false);
         Show.setEnabled(false);
+        
+        Hibrid.setVisible(false);
+        Hibrid.setVisible(false);
+        
+        Cmo.setVisible(false);
+        Cmo.setVisible(false);
     }//GEN-LAST:event_BackToMenuMouseClicked
-
-    private void BackToTutorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackToTutorialMouseClicked
-        Tutorial1.setVisible(true);
-        Tutorial1.setEnabled(true);
-        
-        Menu.setVisible(false);
-        Menu.setEnabled(false);
-        
-        Tutorial2.setVisible(false);
-        Tutorial2.setEnabled(false);
-        
-        Try_Algorithm.setVisible(false);
-        Try_Algorithm.setEnabled(false);
-        
-        Show.setVisible(false);
-        Show.setEnabled(false);
-        
-        player.stop();
-        
-    }//GEN-LAST:event_BackToTutorialMouseClicked
-
+    
     private void ComputeAlgorithmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComputeAlgorithmMouseClicked
-        GeneticAlgorithm algorithm = new GeneticAlgorithm(100,1);
+        /*GeneticAlgorithm algorithm = new GeneticAlgorithm(100,1);
         int n = Integer.parseInt(((String) Objects.requireNonNull(NAlgorithm.getSelectedItem())).trim());
         int d = Integer.parseInt(((String) Objects.requireNonNull(DAlgorithm.getSelectedItem())).trim());
         System.out.println(d);
         Network network = algorithm.getSortedNetwork(n,d);
         createImageFromNetwork(network);
+        */
     }//GEN-LAST:event_ComputeAlgorithmMouseClicked
-
+/*
     private void createImageFromNetwork(Network network) {
         System.out.println(network.visualize());
     }
-
+    */
     private void BackToMenuFromAlgorithmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackToMenuFromAlgorithmMouseClicked
-         Menu.setVisible(true);
+        Menu.setVisible(true);
         Menu.setEnabled(true);
-        
-        
-        Tutorial1.setVisible(false);
-        Tutorial1.setEnabled(false);
-        
-   
-        Tutorial2.setVisible(false);
-        Tutorial2.setEnabled(false);
         
         Try_Algorithm.setVisible(false);
         Try_Algorithm.setEnabled(false);
-        
-        
-        Show.setVisible(false);
-        Show.setEnabled(false);
+       
         
     }//GEN-LAST:event_BackToMenuFromAlgorithmMouseClicked
-
-    private void NAlgorithmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NAlgorithmActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NAlgorithmActionPerformed
 
     private void ComputeShowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComputeShowMouseClicked
         int n = Integer.parseInt(((String) Objects.requireNonNull(NShow.getSelectedItem())).trim());
@@ -512,27 +500,58 @@ public class Gui extends javax.swing.JFrame {
         Menu.setEnabled(true);
         
         
-        Tutorial1.setVisible(false);
-        Tutorial1.setEnabled(false);
-        
-   
-        Tutorial2.setVisible(false);
-        Tutorial2.setEnabled(false);
-        
-        Try_Algorithm.setVisible(false);
-        Try_Algorithm.setEnabled(false);
-        
-        
         Show.setVisible(false);
         Show.setEnabled(false);
+ 
     }//GEN-LAST:event_BackToMenuFromShowMouseClicked
 
     private void NShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NShowActionPerformed
     }//GEN-LAST:event_NShowActionPerformed
 
-    private void DAlgorithmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DAlgorithmActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DAlgorithmActionPerformed
+    private void BackToTutorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackToTutorialMouseClicked
+        Tutorial1.setVisible(true);
+        Tutorial1.setEnabled(true);
+
+        Tutorial2.setVisible(false);
+        Tutorial2.setEnabled(false);
+
+
+        player.stop();
+
+    }//GEN-LAST:event_BackToTutorialMouseClicked
+
+    private void to_hibridMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_to_hibridMouseClicked
+        Try_Algorithm.setVisible(false);
+        Try_Algorithm.setEnabled(false);
+        
+        Hibrid.setVisible(true);
+        Hibrid.setVisible(true);
+        
+    }//GEN-LAST:event_to_hibridMouseClicked
+
+    private void to_cmoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_to_cmoMouseClicked
+        Try_Algorithm.setVisible(false);
+        Try_Algorithm.setEnabled(false);
+        
+        Cmo.setVisible(true);
+        Cmo.setVisible(true);
+    }//GEN-LAST:event_to_cmoMouseClicked
+
+    private void BackToSelectFromHibridMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackToSelectFromHibridMouseClicked
+        Try_Algorithm.setVisible(true);
+        Try_Algorithm.setEnabled(true);
+        
+        Hibrid.setVisible(false);
+        Hibrid.setVisible(false);
+    }//GEN-LAST:event_BackToSelectFromHibridMouseClicked
+
+    private void BackToSelectFromCmoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackToSelectFromCmoMouseClicked
+         Try_Algorithm.setVisible(true);
+        Try_Algorithm.setEnabled(true);
+        
+        Cmo.setVisible(false);
+        Cmo.setVisible(false);
+    }//GEN-LAST:event_BackToSelectFromCmoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -572,16 +591,17 @@ public class Gui extends javax.swing.JFrame {
     private JFXPanel VFXPanel = new JFXPanel();
     private MediaPlayer player; 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel AlgorithmPanel;
     private javax.swing.JLabel BackToMenu;
     private javax.swing.JLabel BackToMenuFromAlgorithm;
     private javax.swing.JLabel BackToMenuFromShow;
+    private javax.swing.JLabel BackToSelectFromCmo;
+    private javax.swing.JLabel BackToSelectFromHibrid;
     private javax.swing.JLabel BackToTutorial;
+    private javax.swing.JPanel Cmo;
     private javax.swing.JLabel ComputeAlgorithm;
     private javax.swing.JLabel ComputeShow;
-    private javax.swing.JComboBox<String> DAlgorithm;
+    private javax.swing.JPanel Hibrid;
     private javax.swing.JPanel Menu;
-    private javax.swing.JComboBox<String> NAlgorithm;
     private javax.swing.JComboBox<String> NShow;
     private javax.swing.JLabel NextTutorial;
     private javax.swing.JPanel Show;
@@ -597,6 +617,11 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel to_cmo;
+    private javax.swing.JLabel to_hibrid;
     private javax.swing.JLabel try_algorithm;
     private javax.swing.JLabel tutorial;
     // End of variables declaration//GEN-END:variables
