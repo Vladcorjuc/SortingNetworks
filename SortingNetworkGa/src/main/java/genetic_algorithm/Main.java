@@ -62,7 +62,7 @@ public class Main {
             System.out.println(Statistics.get());
         }
         else {
-            CompositeGeneticAlgorithm compositeGeneticAlgorithm = new CompositeGeneticAlgorithm(1,1000,1000,
+            CompositeGeneticAlgorithm compositeGeneticAlgorithm = new CompositeGeneticAlgorithm(1,100,200,
                     0.10,0.30,0.4);
             compositeGeneticAlgorithm.getSortedNetwork(wires,depth);
         }

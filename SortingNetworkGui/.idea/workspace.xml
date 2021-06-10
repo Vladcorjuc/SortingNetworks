@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98d909c6-fb3d-4b0c-879d-5d304715a95e" name="Default Changelist" comment="" />
+    <list default="true" id="98d909c6-fb3d-4b0c-879d-5d304715a95e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Comparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Comparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Layer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Layer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Network.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Network.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Sequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Sequence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Gui.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Gui.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CMO.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CMO.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Hibrid.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Hibrid.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/MediaPlayerU.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/MediaPlayerU.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +53,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SortingNetworkGa/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -85,6 +116,8 @@
       <workItem from="1621933949389" duration="914000" />
       <workItem from="1621946527128" duration="8671000" />
       <workItem from="1622122018826" duration="680000" />
+      <workItem from="1623281209254" duration="100000" />
+      <workItem from="1623283672954" duration="136000" />
     </task>
     <servers />
   </component>
