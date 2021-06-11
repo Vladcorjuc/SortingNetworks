@@ -10,7 +10,7 @@ public class SinglePointCrossover implements ICrossover {
 
     @Override
     public Chromosome cross(Chromosome parent0, Chromosome parent1, boolean verbose) {
-        if(verbose){System.out.print("Crossing parents...");}
+        if(verbose){System.out.print("Crossing parents...");System.out.flush();}
         Chromosome chromosome=new Chromosome(parent0.getWires(),parent0.getTargetDepth());
 
         if(parent0.getParallelLayers().size() < parent1.getParallelLayers().size()) {
@@ -47,7 +47,7 @@ public class SinglePointCrossover implements ICrossover {
 
             chromosome.addParallelLayer(layer);
         }
-        if(verbose){System.out.println("Done");}
+        if(verbose){System.out.println("Done");System.out.flush();}
         return chromosome;
     }
 }

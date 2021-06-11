@@ -5,9 +5,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Objects;
 
 
 import genetic_algorithm.composite_objective.CompositeGeneticAlgorithm;
@@ -43,7 +41,7 @@ public class Gui extends javax.swing.JFrame {
     
     private final Double crossoverRates[] = new Double[]{0.01,0.03,0.05,0.07,0.1,0.15,0.20,0.30};
     private final Integer population[] = new Integer[]{100,200,300,400,500,600,700,800,900,1000};
-    private final Integer generations[] = new Integer[]{100,200,300,400,500,600,700,800,900,1000};
+    private final Integer generations[] = new Integer[]{100,200,300,400,500,600,700,800,900,1000,2000,3000,4000,5000,10000};
     private final String crossoverProportion[] = new String[]{"10%","20%","30%","40%","50%"};
     private final Double mutationRates[] = new Double[]{0.01,0.03,0.05,0.07,0.1,0.15,0.20,0.30};
     private final String crossoverTypes[] = new String[]{"Single-Point","Multi-Point"};
@@ -109,8 +107,8 @@ public class Gui extends javax.swing.JFrame {
         Show.setVisible(false);
         Show.setEnabled(false);
         
-        Hibrid.setVisible(false);
-        Hibrid.setVisible(false);
+        Hybrid.setVisible(false);
+        Hybrid.setVisible(false);
         
         Cmo.setVisible(false);
         Cmo.setVisible(false);
@@ -158,7 +156,7 @@ public class Gui extends javax.swing.JFrame {
         ShowPanel = new javax.swing.JPanel();
         showN = new javax.swing.JSpinner(new SpinnerListModel(Arrays.asList(wires)));
         jLabel5 = new javax.swing.JLabel();
-        Hibrid = new javax.swing.JPanel();
+        Hybrid = new javax.swing.JPanel();
         BackToSelectFromHibrid = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -178,6 +176,8 @@ public class Gui extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         fireHybrid = new javax.swing.JSpinner(new SpinnerListModel(Arrays.asList(wires)));
         depthHybrid = new javax.swing.JSpinner(new SpinnerListModel(Arrays.asList(depth)));
+        jScrollPane1 = new javax.swing.JScrollPane();
+        textHibrid = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
         Cmo = new javax.swing.JPanel();
         BackToSelectFromCmo = new javax.swing.JLabel();
@@ -196,6 +196,8 @@ public class Gui extends javax.swing.JFrame {
         wiresCMO = new javax.swing.JSpinner(new SpinnerListModel(Arrays.asList(wires)));
         jLabel23 = new javax.swing.JLabel();
         depthCMO = new javax.swing.JSpinner(new SpinnerListModel(Arrays.asList(depth)));
+        jScrollPane2 = new javax.swing.JScrollPane();
+        textCmo = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
 
         jLabel6.setText("jLabel6");
@@ -383,60 +385,60 @@ public class Gui extends javax.swing.JFrame {
 
         getContentPane().add(Show, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
 
-        Hibrid.setBackground(new java.awt.Color(255, 255, 255));
-        Hibrid.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Hybrid.setBackground(new java.awt.Color(255, 255, 255));
+        Hybrid.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BackToSelectFromHibrid.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BackToSelectFromHibridMouseClicked(evt);
             }
         });
-        Hibrid.add(BackToSelectFromHibrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 700, 140, 50));
+        Hybrid.add(BackToSelectFromHibrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 700, 140, 50));
 
         jLabel14.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel14.setText("Tip de Crossover");
         jLabel14.setToolTipText("");
-        Hibrid.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 110, 20));
+        Hybrid.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 110, 20));
 
         jLabel16.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel16.setText("Dimensiunea populației ");
-        Hibrid.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 160, -1));
+        Hybrid.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 160, -1));
 
         jLabel17.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel17.setText("Numărul de generații");
-        Hibrid.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 140, 20));
+        Hybrid.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 140, 20));
 
         jLabel18.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel18.setText("Rata de mutație");
-        Hibrid.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, -1, -1));
+        Hybrid.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel19.setText("Editor");
-        Hibrid.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
+        Hybrid.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel15.setText("Tip de mutație");
-        Hibrid.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 110, 20));
+        Hybrid.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 110, 20));
 
         crossoverHybrid.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         crossoverHybrid.setInheritsPopupMenu(true);
         crossoverHybrid.setRequestFocusEnabled(false);
-        Hibrid.add(crossoverHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 120, 110, 30));
+        Hybrid.add(crossoverHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 120, 110, 30));
 
         populationHybrid.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        Hibrid.add(populationHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 60, 30));
+        Hybrid.add(populationHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 60, 30));
 
         generationsHybrid.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        Hibrid.add(generationsHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, 60, 30));
+        Hybrid.add(generationsHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 70, 30));
 
         mutationHybrid.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        Hibrid.add(mutationHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 120, 60, 30));
+        Hybrid.add(mutationHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 120, 60, 30));
 
         editorType.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        Hibrid.add(editorType, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 160, 30));
+        Hybrid.add(editorType, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 160, 30));
 
         mutationType.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        Hibrid.add(mutationType, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 170, 30));
+        Hybrid.add(mutationType, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 170, 30));
 
         helper.setBackground(new java.awt.Color(255, 255, 255));
         helper.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
@@ -446,32 +448,38 @@ public class Gui extends javax.swing.JFrame {
                 helperActionPerformed(evt);
             }
         });
-        Hibrid.add(helper, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 190, 110, 20));
+        Hybrid.add(helper, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 190, 110, 20));
 
         computeHybrid.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 computeHybridMouseClicked(evt);
             }
         });
-        Hibrid.add(computeHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 160, 130, 70));
+        Hybrid.add(computeHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 160, 130, 70));
 
         jLabel20.setText("Fire");
-        Hibrid.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 30, -1));
+        Hybrid.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 30, -1));
 
         jLabel21.setText("Adâncime");
-        Hibrid.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, -1));
+        Hybrid.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, -1));
 
         fireHybrid.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        Hibrid.add(fireHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 60, 30));
+        Hybrid.add(fireHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 60, 30));
 
         depthHybrid.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        Hibrid.add(depthHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 60, 30));
+        Hybrid.add(depthHybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 60, 30));
+
+        textHibrid.setColumns(20);
+        textHibrid.setRows(5);
+        jScrollPane1.setViewportView(textHibrid);
+
+        Hybrid.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 266, 950, 420));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Hibrid.png"))); // NOI18N
         jLabel7.setText("aaaaaaaasddddddddddddddddddddddddddddddddddd");
-        Hibrid.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 1024, 768));
+        Hybrid.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 1024, 768));
 
-        getContentPane().add(Hibrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
+        getContentPane().add(Hybrid, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
 
         Cmo.setBackground(new java.awt.Color(255, 255, 255));
         Cmo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -486,7 +494,7 @@ public class Gui extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel9.setText("Rata de Crossover");
         jLabel9.setToolTipText("");
-        Cmo.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 130, 20));
+        Cmo.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, 130, 20));
 
         jLabel10.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel10.setText("Numărul de generații");
@@ -498,28 +506,28 @@ public class Gui extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel12.setText("Proporție de Crossover");
-        Cmo.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, -1, -1));
+        Cmo.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel13.setText("Rata de mutație");
-        Cmo.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 180, -1, -1));
+        Cmo.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 190, -1, -1));
 
-        crossoverRateCMO.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        crossoverRateCMO.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         crossoverRateCMO.setInheritsPopupMenu(true);
         crossoverRateCMO.setRequestFocusEnabled(false);
-        Cmo.add(crossoverRateCMO, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, 60, 30));
+        Cmo.add(crossoverRateCMO, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 60, 30));
 
-        populationCMO.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        populationCMO.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         Cmo.add(populationCMO, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 110, 60, 30));
 
-        generationsCMO.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        Cmo.add(generationsCMO, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 110, 60, 30));
+        generationsCMO.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Cmo.add(generationsCMO, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 110, 80, 30));
 
-        crossoverProportionCMO.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        Cmo.add(crossoverProportionCMO, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 60, 30));
+        crossoverProportionCMO.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Cmo.add(crossoverProportionCMO, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 60, 30));
 
-        mutationCMO.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        Cmo.add(mutationCMO, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, 60, 30));
+        mutationCMO.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Cmo.add(mutationCMO, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 180, 60, 30));
 
         computeCMO.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -532,15 +540,21 @@ public class Gui extends javax.swing.JFrame {
         jLabel22.setText("Fire");
         Cmo.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, -1, -1));
 
-        wiresCMO.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        wiresCMO.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         Cmo.add(wiresCMO, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 60, 30));
 
         jLabel23.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel23.setText("Adâncime");
         Cmo.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, -1, -1));
 
-        depthCMO.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        depthCMO.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         Cmo.add(depthCMO, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 60, 30));
+
+        textCmo.setColumns(20);
+        textCmo.setRows(5);
+        jScrollPane2.setViewportView(textCmo);
+
+        Cmo.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 256, 930, 430));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CMO.png"))); // NOI18N
         jLabel8.setText("aaaaaaaasddddddddddddddddddddddddddddddddddd");
@@ -625,8 +639,8 @@ public class Gui extends javax.swing.JFrame {
         Show.setVisible(false);
         Show.setEnabled(false);
         
-        Hibrid.setVisible(false);
-        Hibrid.setVisible(false);
+        Hybrid.setVisible(false);
+        Hybrid.setVisible(false);
         
         Cmo.setVisible(false);
         Cmo.setVisible(false);
@@ -704,8 +718,8 @@ public class Gui extends javax.swing.JFrame {
         Try_Algorithm.setVisible(false);
         Try_Algorithm.setEnabled(false);
         
-        Hibrid.setVisible(true);
-        Hibrid.setVisible(true);
+        Hybrid.setVisible(true);
+        Hybrid.setVisible(true);
         
     }//GEN-LAST:event_to_hibridMouseClicked
 
@@ -721,8 +735,16 @@ public class Gui extends javax.swing.JFrame {
         Try_Algorithm.setVisible(true);
         Try_Algorithm.setEnabled(true);
         
-        Hibrid.setVisible(false);
-        Hibrid.setVisible(false);
+        Hybrid.setVisible(false);
+        Hybrid.setVisible(false);
+
+        if(hybridThread!=null){
+            hybridThread.stop();
+        }
+        if(chartThread!=null){
+            chartThread.stop();
+        }
+        textHibrid.setText("");
     }//GEN-LAST:event_BackToSelectFromHibridMouseClicked
 
     private void BackToSelectFromCmoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackToSelectFromCmoMouseClicked
@@ -731,6 +753,14 @@ public class Gui extends javax.swing.JFrame {
         
         Cmo.setVisible(false);
         Cmo.setVisible(false);
+
+        if(cmoThread!=null){
+            cmoThread.stop();
+        }
+        if(chartThread!=null){
+            chartThread.stop();
+        }
+        textCmo.setText("");
     }//GEN-LAST:event_BackToSelectFromCmoMouseClicked
 
     private void computeCMOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_computeCMOMouseClicked
@@ -746,9 +776,19 @@ public class Gui extends javax.swing.JFrame {
 
         CompositeGeneticAlgorithm algorithm = new CompositeGeneticAlgorithm(1,generations,population,
                 crossoverRate,crossoverProp,mutationRate);
-        
-        
-        
+
+        MessageConsole messageConsole = new MessageConsole(textCmo);
+        messageConsole.redirectOut();
+
+
+        RealTimeChartCmo swingWorkerRealTime = new RealTimeChartCmo();
+        chartThread = new Thread(swingWorkerRealTime);
+        chartThread.start();
+
+        NetworkRunnable networkRunnable= new NetworkRunnable(algorithm,null,
+                swingWorkerRealTime.getSwingWorkerCmo(), null,wires,depth);
+        cmoThread=new Thread(networkRunnable);
+        cmoThread.start();
     }//GEN-LAST:event_computeCMOMouseClicked
 
     private void helperActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helperActionPerformed
@@ -756,11 +796,12 @@ public class Gui extends javax.swing.JFrame {
     }//GEN-LAST:event_helperActionPerformed
 
     private void computeHybridMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_computeHybridMouseClicked
+        textHibrid.setText("");
         int wires = (int) fireHybrid.getValue();
         int depth = (int) depthHybrid.getValue();
 
-        int generations = (int) generationsCMO.getValue();
-        int population = (int) populationCMO.getValue();
+        int generations = (int) generationsHybrid.getValue();
+        int population = (int) populationHybrid.getValue();
         
         ICrossover crossover = null;
         if(crossoverHybrid.getValue().equals("Multi-Point")){
@@ -769,10 +810,10 @@ public class Gui extends javax.swing.JFrame {
         else{
             crossover= new SinglePointCrossover();
         }
-        
-        double mutationRate = (double) mutationCMO.getValue();
+
+        double mutationRate = (double) mutationHybrid.getValue();
         IMutation mutation = null;
-        if(mutationHybrid.getValue().equals("Indirect Replacement")){
+        if(mutationType.getValue().equals("Indirect Replacement")){
             mutation = new IndirectReplacementMutation(mutationRate);
         }
         else{
@@ -791,7 +832,21 @@ public class Gui extends javax.swing.JFrame {
         }
         
         HybridGeneticAlgorithm algorithm = new HybridGeneticAlgorithm(population,1,generations,crossover,usedEditor,mutation,usedHelper,false);
-       
+
+        MessageConsole messageConsole = new MessageConsole(textHibrid);
+        messageConsole.redirectOut();
+
+
+        RealTimeChartHybrid swingWorkerRealTime = new RealTimeChartHybrid();
+        chartThread = new Thread(swingWorkerRealTime);
+        chartThread.start();
+
+        NetworkRunnable networkRunnable= new NetworkRunnable(null,algorithm,null,
+                swingWorkerRealTime.getSwingWorkerHybrid(),wires,depth);
+        hybridThread=new Thread(networkRunnable);
+        hybridThread.start();
+
+
     }//GEN-LAST:event_computeHybridMouseClicked
 
     /**
@@ -829,6 +884,9 @@ public class Gui extends javax.swing.JFrame {
         });
     }
 
+    private Thread hybridThread;
+    private Thread cmoThread;
+    private Thread chartThread;
     private JFXPanel VFXPanel = new JFXPanel();
     private MediaPlayer player; 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -841,7 +899,7 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JPanel Cmo;
     private javax.swing.JLabel ComputeAlgorithm;
     private javax.swing.JLabel ComputeShow;
-    private javax.swing.JPanel Hibrid;
+    private javax.swing.JPanel Hybrid;
     private javax.swing.JPanel Menu;
     private javax.swing.JLabel NextTutorial;
     private javax.swing.JPanel Show;
@@ -887,12 +945,16 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSpinner mutationCMO;
     private javax.swing.JSpinner mutationHybrid;
     private javax.swing.JSpinner mutationType;
     private javax.swing.JSpinner populationCMO;
     private javax.swing.JSpinner populationHybrid;
     private javax.swing.JSpinner showN;
+    private javax.swing.JTextArea textCmo;
+    private javax.swing.JTextArea textHibrid;
     private javax.swing.JLabel to_cmo;
     private javax.swing.JLabel to_hibrid;
     private javax.swing.JLabel try_algorithm;

@@ -17,7 +17,7 @@ public class IndirectReplacementMutation implements IMutation {
     }
 
     public void mutate(Chromosome chromosome,boolean verbose){
-        if(verbose){System.out.print("Mutating...");}
+        if(verbose){System.out.print("Mutating...");System.out.flush();}
         for(List<Gene> layer:chromosome.getParallelLayers()){
             for(Gene gene:layer) {
                 if (random.nextDouble() <= _randomFactor) {
@@ -28,6 +28,6 @@ public class IndirectReplacementMutation implements IMutation {
                 }
             }
         }
-        if(verbose){System.out.println("Done");}
+        if(verbose){System.out.println("Done");System.out.flush();}
     }
 }

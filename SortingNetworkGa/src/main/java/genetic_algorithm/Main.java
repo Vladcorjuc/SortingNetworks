@@ -57,14 +57,14 @@ public class Main {
             HybridGeneticAlgorithm hybridGeneticAlgorithm = new HybridGeneticAlgorithm(100, 1,
                     new SinglePointCrossover(), new CorrectWireEditor(),
                     new SimpleMutation(0.03), null, false);
-            Network network = hybridGeneticAlgorithm.getSortedNetwork(wires,depth,depth);
+            Network network = hybridGeneticAlgorithm.getSortedNetwork(wires,depth,depth,null,null);
             System.out.println(network.getLayers().size() + " " + network.getComparators().size());
             System.out.println(Statistics.get());
         }
         else {
             CompositeGeneticAlgorithm compositeGeneticAlgorithm = new CompositeGeneticAlgorithm(1,100,200,
                     0.10,0.30,0.4);
-            compositeGeneticAlgorithm.getSortedNetwork(wires,depth);
+            compositeGeneticAlgorithm.getSortedNetwork(wires,depth,null,null,null);
         }
     }
 }

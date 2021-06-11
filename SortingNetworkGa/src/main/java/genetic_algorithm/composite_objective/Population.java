@@ -122,6 +122,7 @@ public class Population {
             p.setDominates(Sp);
             p.setDominatedBy(np);
         }
+        System.out.println(F1);
         F.add(F1);
         i=0;
         while (F.get(i).size()>0){

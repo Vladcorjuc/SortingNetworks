@@ -11,7 +11,7 @@ import java.util.Set;
 public class CorrectWireEditor implements IEditor {
     @Override
     public void edit(Chromosome offspring, boolean verbose) {
-        if(verbose){System.out.print("Editing...");}
+        if(verbose){System.out.print("Editing...");System.out.flush();}
         for(List<Gene> layer:offspring.getParallelLayers()){
             Set<Integer> usedWires = new HashSet<>();
             List<Gene> toDelete = new ArrayList<>();
@@ -25,6 +25,6 @@ public class CorrectWireEditor implements IEditor {
             }
             layer.removeAll(toDelete);
         }
-        if(verbose){System.out.println("Done");}
+        if(verbose){System.out.println("Done");System.out.flush();}
     }
 }

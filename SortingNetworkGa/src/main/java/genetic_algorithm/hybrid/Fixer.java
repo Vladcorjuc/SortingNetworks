@@ -156,10 +156,10 @@ public class Fixer {
 
 
     public Chromosome repair(Chromosome offspring,boolean verbose) {
-        if(verbose){System.out.print("Repairing...");}
+        if(verbose){System.out.print("Repairing...");System.out.flush();}
         Network network = offspring.getNetwork();
         Pair<Chromosome,Network> newIndividual = append(offspring,network);
-        if(verbose){System.out.println("Done");}
+        if(verbose){System.out.println("Done");System.out.flush();}
         return insert(newIndividual.getKey(),newIndividual.getValue(),verbose);
 
     }

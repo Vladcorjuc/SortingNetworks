@@ -2,19 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98d909c6-fb3d-4b0c-879d-5d304715a95e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_madgag_animated_gif_lib_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_erichseifert_vectorgraphics2d_VectorGraphics2D_0_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_rototor_pdfbox_graphics2d_0_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_fontbox_2_0_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_pdfbox_2_0_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_knowm_xchart_xchart_3_8_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Comparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Comparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Layer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Layer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/composite_objective/CompositeGeneticAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/composite_objective/CompositeGeneticAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/composite_objective/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/composite_objective/Population.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/Fixer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/Fixer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/HybridGeneticAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/HybridGeneticAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/Population.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/crossover/MultiPointCrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/crossover/MultiPointCrossover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/crossover/SinglePointCrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/crossover/SinglePointCrossover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/editor/CorrectWireEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/editor/CorrectWireEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/mutation/IndirectReplacementMutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/mutation/IndirectReplacementMutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/mutation/SimpleMutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/mutation/SimpleMutation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Network.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Network.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Sequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Sequence.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/target/classes/genetic_algorithm/network/Utils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SortingNetworkGui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SortingNetworkGui.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/Gui.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Gui.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Gui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CMO.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CMO.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Hibrid.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Hibrid.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$11.class" afterDir="false" />
@@ -37,6 +50,14 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -65,11 +86,27 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="gui" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\GitHubProject\SortingNetworkGa\SortingNetworkGui\src\main\resources\networks" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Gui">
+    <configuration name="CompositeGeneticAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="genetic_algorithm.composite_objective.CompositeGeneticAlgorithm" />
+      <module name="SortingNetworkGa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="genetic_algorithm.composite_objective.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Gui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.Gui" />
       <module name="SortingNetworkGui" />
@@ -99,6 +136,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Gui" />
+        <item itemvalue="Application.CompositeGeneticAlgorithm" />
         <item itemvalue="Application.Network" />
       </list>
     </recent_temporary>
@@ -118,6 +156,8 @@
       <workItem from="1622122018826" duration="680000" />
       <workItem from="1623281209254" duration="100000" />
       <workItem from="1623283672954" duration="136000" />
+      <workItem from="1623403669403" duration="255000" />
+      <workItem from="1623403959655" duration="10491000" />
     </task>
     <servers />
   </component>
@@ -129,6 +169,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1621946697568" />
+    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1623415474077">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1623415474077" />
     <state x="498" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1621934017984">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -137,22 +181,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="106" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1621949997658" />
-    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1622144894903">
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1623416631118">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622144894903" />
-    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1622144894902">
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623416631118" />
+    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1623416631118">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1622144894902" />
-    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1622144894902">
+    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1623416631118" />
+    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1623416631118">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1622144894902" />
-    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1622144894902">
+    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1623416631118" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1623416631118">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1622144894902" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623416631118" />
     <state width="1342" height="242" key="GridCell.Tab.1.bottom" timestamp="1622121552650">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -169,13 +213,21 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1342" height="242" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1622121552650" />
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1623411925418">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1623411925418" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1621946332183">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1621946332183" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1622122027023">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1623403959957">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1622122027023" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1623403959957" />
+    <state x="511" y="31" key="refactoring.ChangeSignatureDialog" timestamp="1623415170723">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="511" y="31" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1623415170723" />
   </component>
 </project>

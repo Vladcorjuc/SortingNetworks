@@ -18,7 +18,7 @@ public class SimpleMutation implements IMutation {
     }
     @Override
     public void  mutate(Chromosome offspring, boolean verbose) {
-        if(verbose){System.out.print("Mutating...");}
+        if(verbose){System.out.print("Mutating...");System.out.flush();}
         for(int layer=0;layer<offspring.getParallelLayers().size();layer++){
             List<Pair<Integer,Integer>> toCorrect = new ArrayList<>();
             for(Gene gene:offspring.getParallelLayer(layer)) {
@@ -51,7 +51,7 @@ public class SimpleMutation implements IMutation {
                 }
             }
         }
-        if(verbose){System.out.println("Done");}
+        if(verbose){System.out.println("Done");System.out.flush();}
 
     }
     private int getNewWire(Gene gene, int wires){

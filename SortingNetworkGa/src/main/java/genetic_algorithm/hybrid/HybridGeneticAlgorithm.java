@@ -9,6 +9,7 @@ import genetic_algorithm.hybrid.mutation.SimpleMutation;
 import genetic_algorithm.network.Utils;
 import javafx.util.Pair;
 
+import java.util.List;
 import java.util.function.Function;
 import genetic_algorithm.network.Network;
 
@@ -63,13 +64,15 @@ public class HybridGeneticAlgorithm {
         Statistics.initialize(runs);
     }
 
-    public Network getSortedNetwork(int n,int optimalDepth,int upperDepth){
+    public Network getSortedNetwork(int n, int optimalDepth, int upperDepth, List<Double> bestFifo, List<Double> averageFifo){
 
         Pair<Chromosome,Double> maxFit=new Pair<>(null,0.0);
         Pair<Integer,Double> generationMaxFit = new Pair<>(-1,-1.0);
 
         for(int i=0;i<runs;i++) {
             System.out.println("Run: "+i);
+            System.out.flush();
+
             Population population = Population.initialize(n, optimalDepth,upperDepth,populationSize,fitness,editor,fixer,verbose);
             long startTime = System.nanoTime();
             int generation = 0;
@@ -88,7 +91,18 @@ public class HybridGeneticAlgorithm {
                 generation++;
                 Network network = population.getBest().getKey().getNetwork();
                 double max = evaluate(population.getBest().getKey());
+
+                if(bestFifo!=null) {
+                    synchronized (bestFifo) {
+                        bestFifo.add(max);
+                    }
+                    synchronized (averageFifo) {
+                        averageFifo.add(getAverage(population));
+                    }
+                }
+
                 System.out.println("Generation: "+generation+"\tMax fitness: "+max);
+                System.out.flush();
 
                 if(helper!=null) {
                     if (max > generationMaxFit.getValue()) {
@@ -116,17 +130,22 @@ public class HybridGeneticAlgorithm {
                 Statistics.foundInRound(i);
                 System.out.println(maxFit.getKey());
                 System.out.println("FOUND ->>>"+network);
+                System.out.flush();
             }
 
             long endTime = System.nanoTime();
             long duration = (endTime - startTime);
             System.out.println("Time :"+duration);
+            System.out.flush();
 
         }
 
         return maxFit.getKey().getNetwork();
     }
+    public static Double getAverage(Population population){
+        return population.getFitnessSum()/population.getFitnessValues().size();
 
+    }
     public static Double evaluate(Chromosome individual){
         Network network = individual.getNetwork();
         int n= individual.getWires();
@@ -139,14 +158,6 @@ public class HybridGeneticAlgorithm {
                 ((network.getBad().size() + network.outputs().size()) - n - 1)) -
                 individual.getComparatorsOutOfDepth()/
                         ((individual.depth() - individual.getTargetDepth())* individual.getWires()/2.0);
-    }
-
-    public static void main(String[] args) {
-        HybridGeneticAlgorithm hybridGeneticAlgorithm =new HybridGeneticAlgorithm(100,1,
-                new SinglePointCrossover(),new CorrectWireEditor(),new SimpleMutation(0.03),null,false);
-        Network network = hybridGeneticAlgorithm.getSortedNetwork(9,7,7);
-        System.out.println(network.getLayers().size()+" "+network.getComparators().size());
-        System.out.println(Statistics.get());
     }
 
 }

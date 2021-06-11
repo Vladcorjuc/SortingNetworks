@@ -12,7 +12,7 @@ public class MultiPointCrossover implements ICrossover {
     @Override
     public Chromosome cross(Chromosome parent0, Chromosome parent1, boolean verbose) {
 
-       if(verbose){ System.out.print("Crossing...");}
+       if(verbose){ System.out.print("Crossing...");System.out.flush();}
 
         Chromosome chromosome=new Chromosome(parent0.getWires(),parent0.getTargetDepth());
 
@@ -58,7 +58,7 @@ public class MultiPointCrossover implements ICrossover {
             chromosome.addParallelLayer(genes);
         }
 
-        if(verbose){System.out.println("Done");}
+        if(verbose){System.out.println("Done");System.out.flush();}
         return chromosome;
 
     }

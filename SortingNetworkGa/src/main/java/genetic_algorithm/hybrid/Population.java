@@ -17,6 +17,7 @@ public class Population {
 
     private Function<Chromosome,Double> fitness;
 
+
     public Population(int n, Function<Chromosome, Double> fitness) {
         this.fitness=fitness;
         this.population=new ArrayList<>();
@@ -26,7 +27,7 @@ public class Population {
     public static Population initialize(int n, int parallelLayerSize,int d , int populationSize,
                                         Function<Chromosome, Double> fitness, IEditor editor, Fixer fixer,
                                         boolean verbose) {
-        if(verbose){System.out.print("Initializing population...");}
+        if(verbose){System.out.print("Initializing population...");System.out.flush();}
         Population population = new Population(n,fitness);
         Network filter = Network.createGreenFilter(n);
         for(int i=0;i<populationSize;i++){
@@ -36,7 +37,7 @@ public class Population {
            chromosome = fixer.repair(chromosome,verbose);
            population.addChromosome(chromosome);
         }
-        if(verbose){System.out.println("Done");}
+        if(verbose){System.out.println("Done");System.out.flush();}
         return population;
     }
 
@@ -65,6 +66,14 @@ public class Population {
         }
         return max.getKey();
     }
+    public List<Double> getFitnessValues() {
+        return fitnessValues;
+    }
+
+    public double getFitnessSum() {
+        return fitnessSum;
+    }
+
     public Pair<Chromosome, Double> getBest() {
         Pair<Chromosome,Double> max= new Pair<>(null, -1.0);
 

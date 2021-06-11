@@ -5,6 +5,7 @@ import javafx.util.Pair;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
 
 public class CompositeGeneticAlgorithm {
     private int runs;
@@ -23,18 +24,29 @@ public class CompositeGeneticAlgorithm {
         this.mutation = new IndirectReplacementMutation(mutationRate);
     }
 
-    public void getSortedNetwork(int n, int d){
+    public void getSortedNetwork(int n, int d, List<Double> composite1Fifo,
+                                 List<Double> composite2Fifo,List<Double> composite3Fifo){
         for(int run=0;run<runs;run++){
             int generation=0;
             Population parents = Population.initialize(n,d,popSize);
             Population offspring = new Population();
             while (generation<generations) {
                 System.out.println(generation);
+
+
                 Population currentPopulation = new Population(offspring.getChromosomes());
                 System.out.println(currentPopulation.getChromosomes());
                 System.out.println("non-dominated sort");
                 List<List<Chromosome>> fronts = currentPopulation.nonDominatedSort();
 
+                if(composite1Fifo!=null){
+                    if(currentPopulation.getChromosomes().size()>0) {
+                        int random = new Random().nextInt(currentPopulation.getChromosomes().size());
+                        composite1Fifo.add(composite1(currentPopulation.getChromosomes().get(random)));
+                        composite2Fifo.add(composite2(currentPopulation.getChromosomes().get(random)));
+                        composite3Fifo.add(composite3(currentPopulation.getChromosomes().get(random)));
+                    }
+                }
                 System.out.println("add possible fronts");
                 int i=0;
                 while(parents.getChromosomes().size() + fronts.get(i).size() < popSize){
@@ -146,9 +158,9 @@ public class CompositeGeneticAlgorithm {
 
 
     public static void main(String[] args) {
-        CompositeGeneticAlgorithm compositeGeneticAlgorithm = new CompositeGeneticAlgorithm(1,1000,1000,
+        CompositeGeneticAlgorithm compositeGeneticAlgorithm = new CompositeGeneticAlgorithm(1,1000,100,
                 0.10,0.30,0.4);
-        compositeGeneticAlgorithm.getSortedNetwork(4,3);
+        compositeGeneticAlgorithm.getSortedNetwork(4,3,null,null,null);
     }
 
 }
