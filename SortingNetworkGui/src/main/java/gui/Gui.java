@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.Arrays;
 
@@ -31,7 +32,7 @@ import javafx.scene.media.MediaView;
 import javafx.stage.Screen;
 
 import javax.imageio.ImageIO;
-import javax.swing.SpinnerListModel;
+import javax.swing.*;
 
 /**
  *
@@ -199,6 +200,8 @@ public class Gui extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         textCmo = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
+        Credits = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
 
         jLabel6.setText("jLabel6");
 
@@ -562,6 +565,21 @@ public class Gui extends javax.swing.JFrame {
 
         getContentPane().add(Cmo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
 
+        Credits.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout CreditsLayout = new javax.swing.GroupLayout(Credits);
+        Credits.setLayout(CreditsLayout);
+        CreditsLayout.setHorizontalGroup(
+            CreditsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
+        );
+        CreditsLayout.setVerticalGroup(
+            CreditsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(Credits, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 750));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -899,6 +917,7 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JPanel Cmo;
     private javax.swing.JLabel ComputeAlgorithm;
     private javax.swing.JLabel ComputeShow;
+    private javax.swing.JPanel Credits;
     private javax.swing.JPanel Hybrid;
     private javax.swing.JPanel Menu;
     private javax.swing.JLabel NextTutorial;
@@ -938,6 +957,7 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

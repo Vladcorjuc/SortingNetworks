@@ -16,17 +16,17 @@ public class MultiPointCrossover implements ICrossover {
 
         Chromosome chromosome=new Chromosome(parent0.getWires(),parent0.getTargetDepth());
 
-        if(parent0.getParallelLayers().size() < parent1.getParallelLayers().size()) {
+        if(parent0.getTargetDepth() < parent1.getTargetDepth()) {
             Chromosome aux = parent0;
             parent0 = parent1;
             parent1 = aux;
         }
 
-        for(int layer=0;layer<parent0.depth();layer++){
+        for(int layer=0;layer<parent0.getTargetDepth();layer++){
 
             List<Gene> genes = new ArrayList<>();
             List<Gene> parent0Layer = parent0.getParallelLayer(layer);
-            if(parent1.depth()<=layer){
+            if(parent1.getTargetDepth()<=layer){
                 for(Gene gene:parent0Layer){
                     genes.add(new Gene(gene));
                 }

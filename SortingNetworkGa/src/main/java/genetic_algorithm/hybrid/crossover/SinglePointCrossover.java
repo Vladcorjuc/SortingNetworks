@@ -12,14 +12,13 @@ public class SinglePointCrossover implements ICrossover {
     public Chromosome cross(Chromosome parent0, Chromosome parent1, boolean verbose) {
         if(verbose){System.out.print("Crossing parents...");System.out.flush();}
         Chromosome chromosome=new Chromosome(parent0.getWires(),parent0.getTargetDepth());
-
-        if(parent0.getParallelLayers().size() < parent1.getParallelLayers().size()) {
+        if(parent0.getTargetDepth() < parent1.getTargetDepth()) {
             Chromosome aux = parent0;
             parent0 = parent1;
             parent1 = aux;
         }
 
-        for(int i=0;i<parent0.getParallelLayers().size();i++){
+        for(int i=0;i<parent0.getTargetDepth();i++){
             List<Gene> layer = new ArrayList<>();
 
             List<Gene> parent0Layer = parent0.getParallelLayer(i);
