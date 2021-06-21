@@ -7,30 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98d909c6-fb3d-4b0c-879d-5d304715a95e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SortingNetworkGui_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Minimal_Depth_Sorting_Network_Vlad_Corjuc.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Minimal_Depth_Sorting_Network_Vlad_Corjuc.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/crossover/MultiPointCrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/crossover/MultiPointCrossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/crossover/SinglePointCrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SortingNetworkGa/src/main/java/genetic_algorithm/hybrid/crossover/SinglePointCrossover.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Gui.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Gui.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Gui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/Gui.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/Gui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/MediaPlayerU.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/MediaPlayerU.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +147,7 @@
       <workItem from="1623403959655" duration="11153000" />
       <workItem from="1623490963927" duration="1381000" />
       <workItem from="1623744092476" duration="5100000" />
-      <workItem from="1623833663640" duration="7358000" />
+      <workItem from="1623833663640" duration="12766000" />
     </task>
     <servers />
   </component>
