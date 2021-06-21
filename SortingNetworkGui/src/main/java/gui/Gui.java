@@ -115,6 +115,10 @@ public class Gui extends javax.swing.JFrame {
         Cmo.setVisible(false);
         
         
+        Credits.setVisible(false);
+        Credits.setEnabled(false);
+        
+        
     }
     
     public static double fromPercentageString(String value){
@@ -201,7 +205,8 @@ public class Gui extends javax.swing.JFrame {
         textCmo = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
         Credits = new javax.swing.JPanel();
-        jLabel24 = new javax.swing.JLabel();
+        BackToMenuFromCredits = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
 
         jLabel6.setText("jLabel6");
 
@@ -566,19 +571,20 @@ public class Gui extends javax.swing.JFrame {
         getContentPane().add(Cmo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 768));
 
         Credits.setBackground(new java.awt.Color(255, 255, 255));
+        Credits.setPreferredSize(new java.awt.Dimension(1024, 768));
+        Credits.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout CreditsLayout = new javax.swing.GroupLayout(Credits);
-        Credits.setLayout(CreditsLayout);
-        CreditsLayout.setHorizontalGroup(
-            CreditsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
-        );
-        CreditsLayout.setVerticalGroup(
-            CreditsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
-        );
+        BackToMenuFromCredits.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BackToMenuFromCreditsMouseClicked(evt);
+            }
+        });
+        Credits.add(BackToMenuFromCredits, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 680, 210, 60));
 
-        getContentPane().add(Credits, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 750));
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Credits.png"))); // NOI18N
+        Credits.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        getContentPane().add(Credits, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 768));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -618,6 +624,11 @@ public class Gui extends javax.swing.JFrame {
 
     private void creditsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_creditsMouseClicked
         // TODO add your handling code here:
+        Menu.setVisible(false);
+        Menu.setEnabled(false);
+        
+        Credits.setVisible(true);
+        Credits.setEnabled(true);
     }//GEN-LAST:event_creditsMouseClicked
     //endregion
     
@@ -867,6 +878,15 @@ public class Gui extends javax.swing.JFrame {
 
     }//GEN-LAST:event_computeHybridMouseClicked
 
+    private void BackToMenuFromCreditsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackToMenuFromCreditsMouseClicked
+        // TODO add your handling code here:
+        Credits.setVisible(false);
+        Credits.setEnabled(false);
+        
+        Menu.setVisible(true);
+        Menu.setEnabled(true);
+    }//GEN-LAST:event_BackToMenuFromCreditsMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -910,6 +930,7 @@ public class Gui extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BackToMenu;
     private javax.swing.JLabel BackToMenuFromAlgorithm;
+    private javax.swing.JLabel BackToMenuFromCredits;
     private javax.swing.JLabel BackToMenuFromShow;
     private javax.swing.JLabel BackToSelectFromCmo;
     private javax.swing.JLabel BackToSelectFromHibrid;
@@ -957,7 +978,7 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
